@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.text-shadow{
+     text-shadow: 2px 3px 3px black;
+}
+.chevron {
+     position: relative;
+     text-align: center;
+     padding: 12px;
+     margin-bottom: 6px;
+}
+.chevron:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 51%;
+     background: red;
+     transform: skew(0deg, 6deg);
+     z-index: 1;
+}
+.chevron:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 100%;
+     width: 50%;
+     background: red;
+     transform: skew(0deg, -6deg);
+     z-index: 1;
+}
