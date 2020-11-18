@@ -43,7 +43,7 @@ class LandingPageCover extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Image::make('Image'),
+            Image::make('Image')->help('1250x700'),
             Text::make('Link')
         ];
     }
