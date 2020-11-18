@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
+.open-sans{
+     font-family: 'Open Sans', sans-serif;
+}
 .text-shadow{
      text-shadow: 2px 3px 3px black;
 }

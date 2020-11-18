@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -52,9 +53,11 @@ class Product extends Resource
             BelongsTo::make('Brand')->nullable(),
             Text::make('Name'),
             Image::make('Cover Image', 'image')->help('600x450'),
+            Image::make('Thumbnail')->help('320x320'),
             Currency::make('Price')->currency('MVR'),
             Number::make('Quantity'),
             Trix::make('Content'),
+            Boolean::make('Featured'),
             BelongsTo::make('User')->exceptOnForms(),
             HasMany::make('Product Images')
 

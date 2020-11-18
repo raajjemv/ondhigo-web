@@ -46,6 +46,7 @@ class Promotion extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Name'),
+            Text::make('Url')->nullable(),
             Image::make('Home Page Image'),
             Image::make('Detail Page Image'),
             DateTime::make('Start'),

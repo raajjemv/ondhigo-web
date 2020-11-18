@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('brand_id')->nullable()->constrained();
             $table->string('name');
             $table->string('image');
+            $table->string('thumbnail')->nullable();
             $table->string('slug');
             $table->float('price', 8, 2);
             $table->bigInteger('quantity')->default(1);
