@@ -1,8 +1,41 @@
-<nav class="relative z-20 flex items-center justify-center flex-wrap p-4"
-    style="background: linear-gradient(to bottom,gray,rgba(255, 0, 0, 0))">
+<nav class="relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
+    style="background: {{ Route::current()->uri == '/' ? 'linear-gradient(to bottom,gray,rgba(255, 0, 0, 0))' : 'rgba(31, 41, 55, 1)' }}">
 
     <div class="">
-        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
+        <div class="block lg:hidden">
+            <div class="flex justify-between">
+                <img src="{{ asset('images/logo.png') }}" class="w-24">
+                <button
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Icon when menu is closed. -->
+                    <!--
+                        Heroicon name: menu
+            
+                        Menu open: "hidden", Menu closed: "block"
+                      -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- Icon when menu is open. -->
+                    <!--
+                        Heroicon name: x
+            
+                        Menu open: "block", Menu closed: "hidden"
+                      -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <a href="{{ route('index') }}"
+            class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             HOME
         </a>
         <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
@@ -15,11 +48,12 @@
             EVENTS
         </a>
     </div>
-    <div class="">
+    <div class="hidden lg:block">
         <img src="{{ asset('images/logo.png') }}" class="w-24">
     </div>
     <div class="">
-        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white ml-4 mr-4">
+        <a href=""
+            class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white ml-0 lg:ml-4 mr-4">
             PHOTO GALLERY
         </a>
         <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
@@ -28,5 +62,8 @@
         <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             CONTACT US
         </a>
+    </div>
+    <div class="mt-4 lg:mt-0">
+        <livewire:menu-cart-icon />
     </div>
 </nav>

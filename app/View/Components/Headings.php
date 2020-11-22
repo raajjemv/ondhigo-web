@@ -12,9 +12,11 @@ class Headings extends Component
      * @return void
      */
     public $heading;
-    public function __construct($heading)
+    public $color;
+    public function __construct($heading, $color = NULL)
     {
         $this->heading = $heading;
+        $this->color = $color;
     }
 
     /**

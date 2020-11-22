@@ -2,10 +2,11 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Brand extends Resource
@@ -44,6 +45,7 @@ class Brand extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Name'),
+            Image::make('Logo'),
             BelongsTo::make('User')->exceptOnForms()
         ];
     }

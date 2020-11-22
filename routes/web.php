@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Livewire\Cart;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::get('/cart', Cart::class)->name('cart.index');
+
+
+Route::get('/product/{slug}/{id}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/brand/{slug}', function ($slug) {
+    return $slug;
+})->name('brand.show');

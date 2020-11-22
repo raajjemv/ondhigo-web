@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
+use App\Models\FeaturedVideo;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\LandingPageCover;
 use App\Models\Partner;
 use App\Models\Product;
 use App\Models\Promotion;
+use Laravel\Fortify\Features;
 
 class HomeController extends Controller
 {
@@ -17,7 +20,9 @@ class HomeController extends Controller
         $promotion = $this->promotion();
         $featured_products = $this->featured_products();
         $partners = $this->partners();
-        return view('welcome', compact('landing_page_cover', 'promotion', 'featured_products', 'partners'));
+        $featured_videos = $this->featured_videos();
+        $events = $this->events();
+        return view('welcome', compact('landing_page_cover', 'promotion', 'featured_products', 'partners', 'featured_videos', 'events'));
     }
     public function landing_page_cover()
     {
@@ -33,10 +38,18 @@ class HomeController extends Controller
     }
     public function featured_products()
     {
-        return Product::where('featured', 1)->latest()->take(4)->select('id', 'name', 'slug', 'image')->get();
+        return Product::where('featured', 1)->latest()->take(4)->select('id', 'name', 'slug', 'image', 'thumbnail')->get();
     }
     public function partners()
     {
         return Partner::latest()->get();
+    }
+    public function featured_videos()
+    {
+        return FeaturedVideo::latest()->take(5)->get();
+    }
+    public function events()
+    {
+        return Event::latest()->take(3)->get();
     }
 }
