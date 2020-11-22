@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     public function show($slug, $id)
     {
-        $product = Product::where('id', $id)->with('category', 'brand')->first();
+        $product = Product::where('id', $id)->with('category', 'brand', 'product_images')->first();
         $related_products = Product::where('category_id', $product->category_id)
             ->orwhere('brand_id', $product->brand_id)
             ->where('id', '!=', $product->id)

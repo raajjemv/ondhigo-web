@@ -5,13 +5,11 @@
           {{ $product->category->name }} > <span class="font-semibold">{{ $product->name }}</span>
      </div>
      <div class="flex flex-wrap my-5">
-          <div class="w-full md:w-1/2">
-               <div class="pr-0 md:pr-3">
-                    <img src="{{ asset('storage/'.$product->image) }}" class="w-full object-contain">
-               </div>
+          <div class="w-full md:w-1/2 pr-0 md:pr-3">
+               @livewire('product-images', ['cover' => $product->image,'product_images' => $product->product_images])
           </div>
           <div class="w-full md:w-1/2">
-               <div class="">
+               <div class="mb-4">
                     <div class="text-4xl text-gray-600 open-sans">{{ $product->name }}</div>
                     <div class="mt-2 border-b border-gray-200 pb-3">
                          <span

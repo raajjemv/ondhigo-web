@@ -19,6 +19,10 @@ module.exports = {
                 '98': '30rem',
                 '99': '45rem',
             },
+            colors: {
+                'semi-75': 'rgba(0, 0, 0, 0.75)',
+                'semi-60': 'rgba(0, 0, 0, 0.6)'
+            },
 
         },
     },
