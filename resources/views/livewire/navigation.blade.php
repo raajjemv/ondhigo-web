@@ -41,7 +41,8 @@
         <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             ABOUT
         </a>
-        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
+        <a href="{{ route('product.index') }}"
+            class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             PRODUCTS
         </a>
         <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">

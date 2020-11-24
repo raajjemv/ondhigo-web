@@ -4,6 +4,7 @@ use App\Http\Livewire\Cart;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Livewire\Products;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get('/cart', Cart::class)->name('cart.index');
+Route::get('/products', Products::class)->name('product.index');
 
 
 Route::get('/product/{slug}/{id}', [ProductController::class, 'show'])->name('product.show');
