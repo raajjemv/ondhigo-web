@@ -103,7 +103,7 @@
 <div class="container mx-auto">
     <div>
         <div>
-            <x-headings heading="OUT PARTNERS" />
+            <x-headings heading="News & Events" />
         </div>
         <div class="flex flex-wrap justify-center">
             @foreach ($events as $event)
