@@ -16,8 +16,9 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('contact_number');
-            $table->string('address');
-            $table->text('additional_notes')->nullable();
+            $table->string('customer_name');
+            $table->text('notes')->nullable();
+            $table->text('email')->nullable();
             $table->float('total', 8, 2);
             $table->boolean('status')->default(0);
             $table->timestamps();

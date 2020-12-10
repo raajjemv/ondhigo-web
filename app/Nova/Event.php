@@ -46,7 +46,8 @@ class Event extends Resource
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Name'),
             Image::make('Cover Photo'),
-            Trix::make('Content')
+            Trix::make('Content'),
+            Text::make('Location')
         ];
     }
 

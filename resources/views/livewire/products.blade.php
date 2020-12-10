@@ -5,7 +5,7 @@
         </div>
         <div>
             <div class="relative text-gray-600 ">
-                <input type="search" name="search" placeholder="Search"
+                <input type="search" name="search" placeholder="Search" autocomplete="off"
                     class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none" wire:model="search">
                 <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
                     <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -23,22 +23,38 @@
     <div class="flex flex-wrap">
         <div class="w-full md:w-1/5 mt-2">
             <div class="bg-white shadow">
-                <div class="p-2 bg-gray-100 rounded text-red-600 font-semibold">Brands</div>
+                <div class="p-2 bg-gray-100 rounded text-red-600 font-semibold flex justify-between">
+                    Brands
+                    @if($brand)
+                    <button class="text-red-500" wire:click="$set('brand','')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    @endif
+                </div>
                 <div class="pl-2 md:pl-3 py-3">
                     @foreach($products->groupBy('brand_id') as $product)
                     <div class="mb-1">
-                        <a class="text-gray-500 hover:text-red-600 cursor-pointer">-
+                        <a class="text-gray-500 hover:text-red-600 cursor-pointer"
+                            wire:click="$set('brand',{{ $product[0]['brand']['id'] }})">-
                             {{ $product[0]['brand']['name'] }}</a>
                     </div>
                     @endforeach
                 </div>
             </div>
             <div class="bg-white shadow mt-5">
-                <div class="p-2 bg-gray-100 rounded text-red-600 font-semibold">Categories</div>
+                <div class="p-2 bg-gray-100 rounded text-red-600 font-semibold flex justify-between">
+                    Categories
+                    @if($category)
+                    <button class="text-red-500" wire:click="$set('category','')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    @endif
+                </div>
                 <div class="pl-2 md:pl-3 py-3">
                     @foreach($products->groupBy('category_id') as $product)
                     <div class="mb-1">
-                        <a class="text-gray-500 hover:text-red-600 cursor-pointer">-
+                        <a class="text-gray-500 hover:text-red-600 cursor-pointer"
+                            wire:click="$set('category',{{ $product[0]['category']['id'] }})"> -
                             {{ $product[0]['category']['name'] }}</a>
                     </div>
                     @endforeach
@@ -51,7 +67,11 @@
                 <a href="{{ route('product.show',['slug' => $product->slug,'id' => $product->id]) }}"
                     class="w-1/2 md:w-1/4 px-2 outline-none group mb-10">
                     <div class="p-2 rounded-lg group-hover:bg-gray-100">
+                        @if ($product->thumbnail)
+                        <img src="{{ asset('storage/'.$product->thumbnail) }}" class="w-full object-cover" alt="">
+                        @else
                         <img src="{{ asset('storage/'.$product->image) }}" class="rounded w-full h-72 object-cover">
+                        @endif
                         <div class="text-gray-700">{{ $product->name }}</div>
                         <div class="flex justify-between items-center">
                             <div class="text-sm text-red-700 group-hover:text-gray-700 font-bold josefin-sans ">MVR

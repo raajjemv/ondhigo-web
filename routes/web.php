@@ -1,10 +1,16 @@
 <?php
 
 use App\Http\Livewire\Cart;
+use App\Http\Livewire\About;
+use App\Http\Livewire\Event;
+use App\Http\Livewire\Events;
+use App\Http\Livewire\Contact;
+use App\Http\Livewire\Products;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Livewire\Products;
+use App\Http\Livewire\Gallery;
+use App\Http\Livewire\ShowGallery;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +32,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/cart', Cart::class)->name('cart.index');
 Route::get('/products', Products::class)->name('product.index');
-
+Route::get('/contact', Contact::class)->name('contact');
+Route::get('/about', About::class)->name('about');
+Route::get('/events', Events::class)->name('events');
+Route::get('/event/{slug}/{id}', Event::class)->name('event.show');
+Route::get('/galleries', Gallery::class)->name('galleries');
+Route::get('/gallery/{id}', [HomeController::class, 'galleryShow'])->name('gallery.show');
 
 Route::get('/product/{slug}/{id}', [ProductController::class, 'show'])->name('product.show');
-Route::get('/brand/{slug}', function ($slug) {
-    return $slug;
-})->name('brand.show');

@@ -19,6 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('slug');
             $table->string('cover_photo');
             $table->text('content');
+            $table->string('location')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });

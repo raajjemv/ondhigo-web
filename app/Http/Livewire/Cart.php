@@ -8,9 +8,20 @@ use Illuminate\Support\Facades\Session;
 class Cart extends Component
 {
     public $cart_items;
+    public $show = 0;
+    public $total = 0;
     public function mount()
     {
         $this->cart_items = Session::get('cart.items');
+        $this->cartTotal();
+    }
+    public function cartTotal()
+    {
+        $total = collect($this->cart_items)->map(function ($item) {
+            return $item->price;
+        });
+        $this->total = number_format($total->sum(), 2);
+        // return number_format($total->sum(), 2);
     }
     public function removeItem($index)
     {

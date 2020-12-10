@@ -21,7 +21,7 @@
                                    <span class="text-gray-600">MVR</span> <span
                                         class="text-4xl josefin-sans text-red-700">{{ number_format($product->price,2) }}</span>
                               </div>
-                              <a href="{{ route('brand.show',['slug' => $product->brand->slug]) }}">
+                              <a href="{{ route('product.index',['brand' => $product->brand->id]) }}">
                                    <img src="{{ asset('storage/'.$product->brand->logo) }}" class="w-24">
                                    <span class="text-sm text-blue-500">shop by this brand</span>
                               </a>

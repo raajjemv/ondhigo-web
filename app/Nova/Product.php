@@ -56,7 +56,7 @@ class Product extends Resource
             Image::make('Thumbnail')->help('320x320'),
             Currency::make('Price')->currency('MVR'),
             Number::make('Quantity'),
-            Trix::make('Content'),
+            Trix::make('Content')->withFiles('public'),
             Boolean::make('Featured'),
             BelongsTo::make('User')->exceptOnForms(),
             HasMany::make('Product Images')

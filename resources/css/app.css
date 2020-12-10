@@ -2,6 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import '@splidejs/splide/dist/css/splide.min.css';
+@import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 .open-sans{
      font-family: 'Open Sans', sans-serif;
@@ -44,4 +46,25 @@
   background: -webkit-linear-gradient(gold,gray);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@layer components {
+     .side-line {
+          @apply overflow-hidden text-center
+     }
+
+     .side-line:before,
+     .side-line:after {
+          @apply bg-gray-300 w-1/2 relative h-0.5 inline-block align-middle;
+          content: "";
+     }
+
+     .side-line:before {
+     @apply right-3;
+     margin-left: -50%;
+     }
+
+     .side-line:after {
+     @apply left-3;
+     margin-right: -50%;
+     }
 }

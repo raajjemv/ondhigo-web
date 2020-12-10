@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\FeaturedVideo;
+use App\Models\GalleryItem;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\LandingPageCover;
@@ -51,5 +52,10 @@ class HomeController extends Controller
     public function events()
     {
         return Event::latest()->take(3)->get();
+    }
+    public function galleryShow($id)
+    {
+        $gallery = GalleryItem::where('gallery_id', $id)->get();
+        return view('gallery-show', compact('gallery'));
     }
 }

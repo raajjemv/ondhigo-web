@@ -1,4 +1,4 @@
-<div class="bg-red-600 py-5" style="background: url({{ asset('images/bg.jpg') }});background-size:100%">
+<div class="footer bg-red-600 py-5" style="background: url({{ asset('images/bg.jpg') }});background-size:100%">
     <div class="container mx-auto">
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/3">
@@ -38,7 +38,7 @@
         </div>
     </div>
 </div>
-<div class="bg-black text-white py-5">
+<div class="footer bg-black text-white py-5">
     <div class="container mx-auto">
         <div>
             <i class="fas fa-copyright"></i>

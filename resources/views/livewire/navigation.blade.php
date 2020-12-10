@@ -1,4 +1,4 @@
-<nav class="relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
+<nav class="menu relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
     style="background: {{ Route::current()->uri == '/' ? 'linear-gradient(to bottom,gray,rgba(255, 0, 0, 0))' : 'rgba(31, 41, 55, 1)' }}">
 
     <div class="">
@@ -38,14 +38,16 @@
             class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             HOME
         </a>
-        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
+        <a href="{{ route('about') }}" }}
+            class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             ABOUT
         </a>
         <a href="{{ route('product.index') }}"
             class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             PRODUCTS
         </a>
-        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
+        <a href="{{ route('events') }}"
+            class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             EVENTS
         </a>
     </div>
@@ -53,14 +55,15 @@
         <img src="{{ asset('images/logo.png') }}" class="w-24">
     </div>
     <div class="">
-        <a href=""
+        <a href="{{ route('galleries') }}"
             class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white ml-0 lg:ml-4 mr-4">
             PHOTO GALLERY
         </a>
         <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             OUTLETS
         </a>
-        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
+        <a href="{{ route('contact') }}"
+            class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             CONTACT US
         </a>
     </div>

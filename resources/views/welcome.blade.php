@@ -12,9 +12,9 @@
 </div>
 <div class="border-t-8  border-black"
     style="background: url({{ asset('images/bg.jpg') }});background-repeat:no-repeat;background-size:100%">
-    <div class="container mx-auto py-10">
+    <div class="container mx-auto py-16">
         <div class="text-4xl text-white uppercase text-center text-shadow">Welcome to Ondhigo</div>
-        <div class=" text-white text-center mt-5">
+        <div class=" text-white text-center mt-5 leading-loose">
             ONDHIGO IS ONE OF THE LEADING DISTRIBUTOR OF INTERNATIONALLY RECOGNIZED BRANDS OF FOOD AND BEVERAGE PRODUCTS
             TO
             AN
@@ -57,18 +57,19 @@
         @endforeach
     </div>
 </div>
-<div class="bg-black my-12 border-t-4 border-b-4 border-yellow-300">
+<div class="bg-black my-12 border-t-4 border-b-4 border-yellow-300"
+    style="background:url({{ asset('images/bg-partners.jpg') }})">
     <div>
         <x-headings heading="OUT PARTNERS" color="gold-gradient-text" />
     </div>
     <div class=" container mx-auto">
         <div class="flex flex-wrap  justify-center items-center">
             @foreach ($partners as $partner)
-            <div class="w-1/6 p-5">
+            <a class="w-1/6 p-5" href="{{ $partner->link }}" target="_blank">
                 <div>
                     <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
     </div>
@@ -89,9 +90,8 @@
                     @foreach ($featured_videos->skip(1) as $video)
                     <div class="w-1/2 mb-6 px-0 md:px-2">
                         <div class="px-2">
-                            <iframe class="w-full h-auto md:h-40"
-                                src="http://www.youtube.com/embed/{{$featured_videos->first()->video}}" frameborder="0"
-                                allowfullscreen></iframe>
+                            <iframe class="w-full h-auto md:h-40" src="http://www.youtube.com/embed/{{$video->video}}"
+                                frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                     @endforeach
@@ -100,7 +100,7 @@
         </div>
     </div>
 </div>
-<div class="container mx-auto">
+<div class="container mx-auto mb-10">
     <div>
         <div>
             <x-headings heading="News & Events" />
@@ -112,7 +112,7 @@
                 <div class="py-2 text-xl font-semibold fira-sans text-red-500">{{ $event->name }}</div>
                 <div class="mt-3 text-sm flex justify-between">
                     <span class="text-gray-500">{{ $event->created_at->format('M d Y') }}</span>
-                    <a
+                    <a href="{{ route('event.show',['slug' => $event->slug,'id' => $event->id]) }}"
                         class="rounded-lg px-2 py-1 bg-gray-100 text-gray-600  hover:bg-gray-200 hover:text-blue-500 cursor-pointer border border-gray-200">Read
                         more</a>
                 </div>
