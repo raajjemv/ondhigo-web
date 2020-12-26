@@ -26,7 +26,7 @@
                 </button>
             </div>
         </div>
-        <div class="@if($show) block @else hidden @endif  block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="@if($show) block @else hidden @endif  block  lg:flex lg:items-center lg:w-auto">
             <a href="{{ route('index') }}"
                 class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
                 HOME
@@ -48,7 +48,7 @@
     <div class="hidden lg:block">
         <img src="{{ asset('images/logo.png') }}" class="w-24">
     </div>
-    <div class="@if($show) block @else hidden @endif  block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="@if($show) block @else hidden @endif  block  lg:flex lg:items-center lg:w-auto">
         <a href="{{ route('galleries') }}"
             class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white ml-0 lg:ml-4 mr-4">
             PHOTO GALLERY
