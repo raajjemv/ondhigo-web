@@ -6,7 +6,7 @@
     <div class="">
         <div class="block lg:hidden">
             <div class="flex justify-between">
-                <img src="{{ asset('images/logo.png') }}" class="w-24">
+                <img src="{{ asset('images/logo.png') }}" class="w-24 h-12 object-cover">
                 <button wire:click="$toggle('show')"
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     aria-expanded="false">
