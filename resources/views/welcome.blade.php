@@ -11,7 +11,7 @@
     </a>
 </div>
 <div class="border-t-8  border-black"
-    style="background: url({{ asset('images/bg.jpg') }});background-repeat:no-repeat;background-size:100%">
+    style="background: url({{ asset('images/bg.jpg') }});background-repeat:no-repeat;background-size:100% 100%">
     <div class="container mx-auto py-16">
         <div class="text-4xl text-white uppercase text-center text-shadow">Welcome to Ondhigo</div>
         <div class=" text-white text-center mt-5 leading-loose">
