@@ -1,5 +1,5 @@
 <div class="footer bg-red-600 py-5" style="background: url({{ asset('images/bg.jpg') }});background-size:100%">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-3 md:px-0">
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/3">
                 <div class="text-xl text-white fira-sans font-bold">FOLLOW US</div>
@@ -39,7 +39,7 @@
     </div>
 </div>
 <div class="footer bg-black text-white py-5">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-3 md:px-0">
         <div>
             <i class="fas fa-copyright"></i>
             {{ date('Y') }} ONDHIGO PVT LTD
