@@ -58,4 +58,8 @@ class HomeController extends Controller
         $gallery = GalleryItem::where('gallery_id', $id)->get();
         return view('gallery-show', compact('gallery'));
     }
+    public function outlets()
+    {
+        return view('outlets');
+    }
 }

@@ -1,6 +1,8 @@
-<nav class="menu relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
+{{-- <nav class="menu relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
     style="background: {{ Route::current()->uri == '/' ? 'linear-gradient(to bottom,gray,rgba(255, 0, 0, 0))' : 'rgba(31, 41, 55, 1)' }}">
-
+--}}
+<nav class="menu relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
+    style="background: {{ Route::current()->uri == '/' ? 'rgba(31, 41, 55, 1)' : 'rgba(31, 41, 55, 1)' }}">
     <div class="">
         <div class="block lg:hidden">
             <div class="flex justify-between">
@@ -59,7 +61,8 @@
             class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white ml-0 lg:ml-4 mr-4">
             PHOTO GALLERY
         </a>
-        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
+        <a href="{{ route('outlets') }}"
+            class="block mt-4 lg:inline-block lg:mt-0 text-shadow hover:text-red-600 text-white mr-4">
             OUTLETS
         </a>
         <a href="{{ route('contact') }}"

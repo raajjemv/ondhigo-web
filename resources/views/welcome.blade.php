@@ -60,7 +60,7 @@
 <div class="bg-black my-12 border-t-4 border-b-4 border-yellow-300"
     style="background:url({{ asset('images/bg-partners.jpg') }})">
     <div>
-        <x-headings heading="OUT PARTNERS" color="gold-gradient-text" />
+        <x-headings heading="OUR GLOBAL PARTNERS" color="gold-gradient-text" />
     </div>
     <div class=" container mx-auto">
         <div class="flex flex-wrap  justify-center items-center">

@@ -38,5 +38,6 @@ Route::get('/events', Events::class)->name('events');
 Route::get('/event/{slug}/{id}', Event::class)->name('event.show');
 Route::get('/galleries', Gallery::class)->name('galleries');
 Route::get('/gallery/{id}', [HomeController::class, 'galleryShow'])->name('gallery.show');
+Route::get('/outlets', [HomeController::class, 'outlets'])->name('outlets');
 
 Route::get('/product/{slug}/{id}', [ProductController::class, 'show'])->name('product.show');
