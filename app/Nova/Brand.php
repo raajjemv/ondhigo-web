@@ -45,7 +45,7 @@ class Brand extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Name'),
-            Image::make('Logo'),
+            Image::make('Logo')->help('177x100'),
             BelongsTo::make('User')->exceptOnForms()
         ];
     }
