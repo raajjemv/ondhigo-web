@@ -62,7 +62,7 @@
             CONTACT US
         </a>
     </div>
-    <div class="mt-4 lg:mt-0 @if($show) block @else hidden @endif  block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="mt-4 lg:mt-0 @if($show) block @else hidden @endif  block  lg:flex lg:items-center lg:w-auto">
         <livewire:menu-cart-icon />
     </div>
 </nav>
