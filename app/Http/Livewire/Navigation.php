@@ -6,6 +6,11 @@ use Livewire\Component;
 
 class Navigation extends Component
 {
+    public $show = false;
+    public function toggleMenu()
+    {
+        $this->show = !$this->show;
+    }
     public function render()
     {
         return view('livewire.navigation');
