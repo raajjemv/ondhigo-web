@@ -1,34 +1,34 @@
 @extends('layouts.main')
 @section('content')
-<div class="container mx-auto my-10 py-10">
-     <div class="text-3xl text-red-600 open-sans">Head Office</div>
-     <div class="flex border rounded shadow-lg">
-          <div id='map' class="w-1/2" style='height: 350px;'></div>
-          <div class="flex items-center">
-               <div class="px-3 text-gray-600">
-                    Ondhigo Pvt. Ltd<br>
-                    M.Reef villa, Block 266, Muiveyo Magu,<br>
-                    20-266, Male’,<br>
-                    Maldives.
-               </div>
-          </div>
-     </div>
-     <br>
-     <div class="text-3xl text-red-600 open-sans">Whole Sale Office</div>
-     <div class="mt-3 mb-10 flex border rounded shadow-lg">
-          <div id='map_two' class="w-1/2" style='height: 350px;'></div>
-          <div class="flex items-center">
-               <div class="px-3 text-gray-600">
-                    LH. Fihaara<br> Boduthakurufaanu Magu<br> Male’ 20-022<br>Maldives.
-               </div>
-          </div>
-     </div>
+<div class="container mx-auto my-10 py-10 px-3">
+    <div class="text-3xl text-red-600 open-sans">Head Office</div>
+    <div class="flex flex-wrap border rounded shadow-lg">
+        <div id='map' class="w-full md:w-1/2" style='height: 350px;'></div>
+        <div class="flex items-center pt-3 md:pt-0">
+            <div class="px-3 text-gray-600">
+                Ondhigo Pvt. Ltd<br>
+                M.Reef villa, Block 266, Muiveyo Magu,<br>
+                20-266, Male’,<br>
+                Maldives.
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="text-3xl text-red-600 open-sans">Whole Sale Office</div>
+    <div class="mt-3 mb-10 flex flex-wrap border rounded shadow-lg">
+        <div id='map_two' class="w-full md:w-1/2" style='height: 350px;'></div>
+        <div class="flex items-center pt-3 md:pt-0">
+            <div class="px-3 text-gray-600">
+                LH. Fihaara<br> Boduthakurufaanu Magu<br> Male’ 20-022<br>Maldives.
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
 @push('scripts')
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
 <script>
-     mapboxgl.accessToken = 'pk.eyJ1IjoiaW1zYW1hYWgiLCJhIjoiY2szNzJ4YnlrMDg4NTNucGE2c2VkdXM2NiJ9.SM3d1tEad1H5punc-Fy7KQ';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaW1zYW1hYWgiLCJhIjoiY2szNzJ4YnlrMDg4NTNucGE2c2VkdXM2NiJ9.SM3d1tEad1H5punc-Fy7KQ';
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
