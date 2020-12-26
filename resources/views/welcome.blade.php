@@ -5,7 +5,7 @@
     {{ session('message') }}
 </x-modal>
 @endif
-<div class="-mt-20 relative z-0">
+<div class=" relative z-0">
     <a href="{{ $landing_page_cover->link }}">
         <img src="{{ asset('storage/'.$landing_page_cover->image) }}" class="w-full">
     </a>
