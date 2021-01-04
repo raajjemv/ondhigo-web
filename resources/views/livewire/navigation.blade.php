@@ -1,7 +1,7 @@
 {{-- <nav class="menu relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
     style="background: {{ Route::current()->uri == '/' ? 'linear-gradient(to bottom,gray,rgba(255, 0, 0, 0))' : 'rgba(31, 41, 55, 1)' }}">
 --}}
-<nav class="menu relative z-20 block lg:flex items-center justify-center flex-wrap p-4"
+<nav class="menu relative z-20 block lg:flex items-center justify-center flex-wrap p-4 text-lg"
     style="background: {{ Route::current()->uri == '/' ? 'rgba(31, 41, 55, 1)' : 'rgba(31, 41, 55, 1)' }}">
     <div class="">
         <div class="block lg:hidden">
