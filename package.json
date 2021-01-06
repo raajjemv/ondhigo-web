@@ -21,6 +21,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "@splidejs/splide": "^2.4.21"
+        "@splidejs/splide": "^2.4.21",
+        "swiper": "^6.4.5"
     }
 }

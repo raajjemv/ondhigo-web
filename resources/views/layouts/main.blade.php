@@ -16,6 +16,7 @@
      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
      <link href="{{ asset('css/gallery/gallery.css') }}" rel="stylesheet">
      <link href="{{ asset('css/gallery/gallery-keyframes-swing.css') }}" rel="stylesheet">
+
      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
      <style>
           .snap {
@@ -57,33 +58,9 @@
 
 
      @livewireScripts
-     @stack('scripts')
+     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
      <script src="{{ mix('/js/app.js') }}"></script>
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-     <Script>
-          var mySwiper = new Swiper('.swiper-container', {
-          // Optional parameters
-          direction: 'vertical',
-          loop: true,
-          
-          // If we need pagination
-          pagination: {
-          el: '.swiper-pagination',
-          },
-          
-          // Navigation arrows
-          navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          },
-          
-          // And if we need scrollbar
-          scrollbar: {
-          el: '.swiper-scrollbar',
-          },
-          })
-     </script>
-
+     @stack('scripts')
 </body>
 
 

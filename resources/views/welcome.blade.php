@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('content')
+
 @if (session()->has('message'))
 <x-modal size="max-w-xs" :visible="true">
     {{ session('message') }}
@@ -63,12 +64,10 @@
         <x-headings heading="OUR GLOBAL PARTNERS" color="gold-gradient-text" />
     </div>
     <div class=" container mx-auto">
-        <div class="flex flex-wrap  justify-center items-center">
-            <div class="main-carousel flex flex-wrap  justify-center items-center"
-                data-flickity='{ "cellAlign": "left", "contain": true }'>
-            </div>
+        <div class="whitespace-nowrap overflow-auto " style="white-space: nowrap">
+
             @foreach ($partners as $partner)
-            <a class="w-1/6 p-5" href="{{ $partner->link }}" target="_blank">
+            <a class="inline-block" href="{{ $partner->link }}" target="_blank">
                 <div>
                     <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
                 </div>
@@ -123,5 +122,6 @@
             @endforeach
         </div>
     </div>
+
 </div>
 @endsection

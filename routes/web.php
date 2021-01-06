@@ -29,6 +29,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::view('/slider', 'slider');
 
 Route::get('/cart', Cart::class)->name('cart.index');
 Route::get('/products', Products::class)->name('product.index');
