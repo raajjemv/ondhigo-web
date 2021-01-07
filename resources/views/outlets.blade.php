@@ -14,12 +14,12 @@
         </div>
     </div>
     <br>
-    <div class="text-3xl text-red-600 open-sans">Whole Sale Office</div>
+    <div class="text-3xl text-red-600 open-sans">Whole Sale centre</div>
     <div class="mt-3 mb-10 flex flex-wrap border rounded shadow-lg">
         <div id='map_two' class="w-full md:w-1/2" style='height: 350px;'></div>
         <div class="flex items-center pt-3 md:pt-0">
             <div class="px-3 text-gray-600">
-                LH. Fihaara<br> Boduthakurufaanu Magu<br> Male’ 20-022<br>Maldives.
+                Ondhigo Traders<Br>LH. Atoll Fihaara<br> Boduthakurufaanu Magu<br> Male’ 20-022<br>Maldives.
             </div>
         </div>
     </div>
