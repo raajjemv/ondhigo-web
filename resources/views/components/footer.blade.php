@@ -40,7 +40,7 @@
         </div>
     </div>
 </div>
-<div class="footer bg-black text-white py-5">
+<div class="footer bg-on-gray py-5">
     <div class="container mx-auto px-3 md:px-0">
         <div>
             <i class="fas fa-copyright"></i>

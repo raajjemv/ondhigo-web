@@ -57,7 +57,7 @@
                                 <div class="w-1/2">Healthy</div>
                             </div>
                             <div class="flex">
-                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold">I</div>
+                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold  mr-1 md:mr-2">I</div>
                                 <div class="w-1/2">Innovative</div>
                             </div>
                             <div class="flex">

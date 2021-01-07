@@ -79,7 +79,7 @@
                     </div>
                     <div class="mb-3">
                         <span class="text-red-600"><i class="fas fa-phone"></i></span>
-                        <span class="text-gray-500 pl-1">+960 334 9898 / +960 334 2626</span>
+                        <span class="text-gray-500 pl-1">+960 333 9898</span>
                     </div>
                     <div>
                         <span class="text-red-600"><i class="fas fa-at"></i></span>
