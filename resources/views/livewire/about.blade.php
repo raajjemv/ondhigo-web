@@ -1,6 +1,6 @@
 <div class="mb-10">
     <div>
-        <img src="{{ asset('images/about2.png') }}" class="w-full h-42 md:h-80 object-cover">
+        <img src="{{ asset('images/about2.png') }}" class="w-full h-42 md:h-96 object-cover">
     </div>
 
     <div class="container mx-auto px-2 ">
