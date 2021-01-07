@@ -8,7 +8,7 @@
 @endif
 <div class=" relative z-0">
     <a href="{{ $landing_page_cover->link }}">
-        <img src="{{ asset('storage/'.$landing_page_cover->image) }}" class="w-full">
+        <img src="{{ asset('storage/'.$landing_page_cover->image) }}" class="w-full h-auto md:h-99 object-cover">
     </a>
 </div>
 {{-- <div class="border-t-8  border-black"
@@ -58,16 +58,15 @@
         @endforeach
     </div>
 </div>
-<div class="bg-black my-12 border-t-4 border-b-4 border-yellow-300"
-    style="background:url({{ asset('images/bg-partners.jpg') }})">
+<div class="bg-on-gray my-12 border-t-4 border-b-4 border-yellow-300">
     <div>
-        <x-headings heading="OUR GLOBAL PARTNERS" color="gold-gradient-text" />
+        <x-headings heading="OUR GLOBAL PARTNERS" color="text-red-700" />
     </div>
     <div class=" container mx-auto">
         <div class="whitespace-nowrap overflow-auto " style="white-space: nowrap">
 
             @foreach ($partners as $partner)
-            <a class="inline-block" href="{{ $partner->link }}" target="_blank">
+            <a class="inline-block mx-6" href="{{ $partner->link }}" target="_blank">
                 <div>
                     <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
                 </div>

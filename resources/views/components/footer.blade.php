@@ -20,18 +20,20 @@
             </div>
             <div class="w-full md:w-2/3 text-white">
                 <div class="text-xl fira-sans font-bold">CONTACT US</div>
-                <div class="flex mt-5">
-                    <div class="mr-4">
-                        <i class="fas fa-phone"></i> +960 333 2828
-                    </div>
-                    <div>
-                        <i class="fas fa-envelope"></i> sales@ondhigo.com
-                    </div>
-                </div>
+                <div class="mt-5">Head Office</div>
+
                 <div class="mt-2">
                     <div>
                         <i class="fas fa-map-marker"></i>
                         M. Reef Villa, Muiveyo Magu, Malé 20-266, Maldives
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="mr-4">
+                        <i class="fas fa-phone"></i> +960 333 9898
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i> sales@ondhigo.com
                     </div>
                 </div>
             </div>

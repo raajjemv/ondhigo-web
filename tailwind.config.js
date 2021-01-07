@@ -21,7 +21,8 @@ module.exports = {
             },
             colors: {
                 'semi-75': 'rgba(0, 0, 0, 0.75)',
-                'semi-60': 'rgba(0, 0, 0, 0.6)'
+                'semi-60': 'rgba(0, 0, 0, 0.6)',
+                'on-gray': '#CCCCCC'
             },
 
         },
