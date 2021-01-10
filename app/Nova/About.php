@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\Image;
 use Froala\NovaFroalaField\Froala;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -46,7 +47,9 @@ class About extends Resource
             Trix::make('Vission')->withFiles('public'),
             Trix::make('Mission')->withFiles('public'),
             Trix::make('Overview')->withFiles('public'),
+            Image::make('Overview Image'),
             Trix::make('About Founder')->withFiles('public'),
+            Image::make('Founder Image'),
             Trix::make('History')->withFiles('public'),
 
         ];

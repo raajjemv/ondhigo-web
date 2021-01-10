@@ -9,7 +9,7 @@
             <div class="flex flex-wrap mt-10 md:mt-5">
                 <div class="w-2/3 md:w-1/3 pt-3 mx-auto ">
                     <figure class="border p-0 mr-0 md:mr-5 rounded-lg overflow-hidden">
-                        <img src="{{ asset('images/junaid.jpg') }}" class="w-full" alt="">
+                        <img src="{{ asset('storage/'.$about->founder_image) }}" class="w-full" alt="">
                         <figcaption class="p-2 bg-gray-100 text-gray-600 ">Mohamed Junaid – Founder</figcaption>
                     </figure>
                 </div>
@@ -124,7 +124,7 @@
                         {!! $about->overview !!}
                     </div>
                     <div class="w-full md:w-1/3">
-                        <img src="{{ asset('images/about-overview.png') }}" class="mt-7 rounded-lg" alt="">
+                        <img src="{{ asset('storage/'.$about->overview_image) }}" class="mt-7 rounded-lg" alt="">
                     </div>
                 </div>
             </div>
