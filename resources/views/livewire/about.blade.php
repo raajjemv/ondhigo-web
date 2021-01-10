@@ -18,6 +18,50 @@
                 </div>
             </div>
         </div>
+        <div class="my-10">
+            <div class="side-line text-center text-3xl open-sans text-red-600 mb-4">KEY MANAGEMENT TEAM</div>
+            <div class="flex flex-wrap justify-center">
+                @foreach ($key_management as $item)
+                <div class="w-full md:w-1/2 px-2 mb-10">
+                    <div class="bg-gray-200 rounded-lg flex">
+                        <div>
+                            <img src="{{ asset('storage/'.$item->image) }}"
+                                class="w-44 h-full object-cover rounded-l-lg">
+                        </div>
+                        <div class="px-2 py-2">
+                            <div class="text-2xl font-semibold">{{ $item->name }}</div>
+                            <div class="text-sm text-gray-600 -mt-1 mb-3">({{ $item->designation }})</div>
+                            <div class="text-sm">
+                                <div class="flex  ">
+                                    <div class="font-semibold w-28">Nationality</div>
+                                    <div class="px-2">{{ $item->nationality }}</div>
+                                </div>
+                                <div class="flex ">
+                                    <div class="font-semibold w-28">Education</div>
+                                    <div class="px-2">{{ $item->education }}</div>
+                                </div>
+                                <div class="flex ">
+                                    <div class="font-semibold w-28">Experience</div>
+                                    <div class="px-2">{{ $item->experience }}</div>
+                                </div>
+                                <div class=" mt-3">
+                                    <div>
+                                        <span class="fas fa-envelope"></span>
+                                        {{ $item->email }}
+                                    </div>
+                                    <div>
+                                        <span class="fas fa-phone"></span>
+                                        {{ $item->contact_number }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
         <div class="mt-10 md:mt-16">
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/2 px-2 ">

@@ -30,19 +30,19 @@
         </div>
         <div class="@if($show) block @else hidden @endif  block  lg:flex lg:items-center lg:w-auto">
             <a href="{{ route('index') }}"
-                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4">
+                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
                 HOME
             </a>
             <a href="{{ route('about') }}" }}
-                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4">
+                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
                 ABOUT
             </a>
             <a href="{{ route('product.index') }}"
-                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4">
+                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
                 PRODUCTS
             </a>
             <a href="{{ route('events') }}"
-                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4">
+                class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
                 EVENTS
             </a>
         </div>
@@ -52,15 +52,15 @@
     </div>
     <div class="@if($show) block @else hidden @endif  block  lg:flex lg:items-center lg:w-auto">
         <a href="{{ route('galleries') }}"
-            class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 ml-0 lg:ml-4 mr-4">
+            class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 ml-0 lg:ml-4 mr-4 font-semibold">
             PHOTO GALLERY
         </a>
         <a href="{{ route('outlets') }}"
-            class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4">
+            class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
             OUTLETS
         </a>
         <a href="{{ route('contact') }}"
-            class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4">
+            class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
             CONTACT US
         </a>
     </div>
