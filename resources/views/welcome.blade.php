@@ -58,7 +58,7 @@
         @endforeach
     </div>
 </div>
-<div class="bg-on-gray my-12 border-t-4 border-b-4 border-yellow-300">
+<div class="bg-gray-100 my-12 ">
     <div>
         <x-headings heading="OUR GLOBAL PARTNERS" color="text-red-700" />
     </div>
