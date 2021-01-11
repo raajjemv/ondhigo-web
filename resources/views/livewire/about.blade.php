@@ -92,12 +92,10 @@
             <div class="mt-20">
                 <div class="side-line text-center text-3xl open-sans text-red-600 ">OVERVIEW</div>
                 <div class="flex flex-wrap">
-                    <div class="w-full md:w-2/3 pr-0 md:pr-3 text-gray-600 text-justify">
+                    <div class="w-full  pr-0 md:pr-3 text-gray-600 text-justify">
                         {!! $about->overview !!}
                     </div>
-                    <div class="w-full md:w-1/3">
-                        <img src="{{ asset('storage/'.$about->overview_image) }}" class="mt-7 rounded-lg" alt="">
-                    </div>
+
                 </div>
             </div>
 
