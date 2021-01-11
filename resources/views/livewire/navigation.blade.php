@@ -35,7 +35,7 @@
             </a>
             <a href="{{ route('about') }}" }}
                 class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
-                ABOUT
+                ABOUT US
             </a>
             <a href="{{ route('product.index') }}"
                 class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">

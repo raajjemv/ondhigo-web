@@ -11,10 +11,12 @@
                          <div class="font-semibold w-1/3">Nationality</div>
                          <div class="px-2 w-2/3">{{ $item->nationality }}</div>
                     </div>
+                    @if ($item->education && $item->education !== '-')
                     <div class="flex ">
                          <div class="font-semibold w-1/3">Education</div>
                          <div class="px-2 w-2/3">{{ $item->education }}</div>
                     </div>
+                    @endif
                     <div class="flex ">
                          <div class="font-semibold w-1/3">Experience</div>
                          <div class="px-2 w-2/3">{{ $item->experience }}</div>
