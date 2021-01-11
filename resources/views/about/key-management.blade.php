@@ -19,6 +19,7 @@
                          <div class="font-semibold w-1/3">Experience</div>
                          <div class="px-2 w-2/3">{{ $item->experience }}</div>
                     </div>
+                    @if ($item->email && $item->email !== '-')
                     <div class=" mt-3">
                          <div>
                               <span class="fas fa-envelope"></span>
@@ -29,6 +30,7 @@
                               {{ $item->contact_number }}
                          </div>
                     </div>
+                    @endif
                </div>
 
           </div>
