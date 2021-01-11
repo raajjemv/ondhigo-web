@@ -58,7 +58,7 @@
         @endforeach
     </div>
 </div>
-<div class="bg-gray-100 my-12 ">
+<div class="bg-gray-300 my-12 ">
     <div>
         <x-headings heading="OUR GLOBAL PARTNERS" color="text-red-700" />
     </div>
@@ -66,7 +66,7 @@
         <div class="whitespace-nowrap overflow-auto " style="white-space: nowrap">
 
             @foreach ($partners as $partner)
-            <a class="inline-block mx-6" href="{{ $partner->link }}" target="_blank">
+            <a class="inline-block mx-6 hover:bg-gray-200 rounded" href="{{ $partner->link }}" target="_blank">
                 <div>
                     <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
                 </div>
