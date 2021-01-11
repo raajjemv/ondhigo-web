@@ -19,7 +19,7 @@
                     @endif
                     <div class="flex ">
                          <div class="font-semibold w-1/3">Experience</div>
-                         <div class="px-2 w-2/3">{{ $item->experience }}</div>
+                         <div class="px-2 w-2/3">{!! nl2br($item->experience) !!}</div>
                     </div>
                     @if ($item->email && $item->email !== '-')
                     <div class=" mt-3">
