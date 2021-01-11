@@ -7,10 +7,11 @@
         <div class="mt-20">
             <div class="side-line text-center text-3xl open-sans text-red-600 ">ABOUT FOUNDER</div>
             <div class="w-full mt-10 md:mt-5">
-                <div class="w-full md:w-1/3 pt-3 mx-auto ">
+                <div class="w-full md:w-2/3 pt-3 mx-auto ">
                     <figure class="border p-0 mr-0 md:mr-5 rounded-lg overflow-hidden">
                         <img src="{{ asset('storage/'.$about->founder_image) }}" class="w-full" alt="">
-                        <figcaption class="p-2 bg-gray-100 text-gray-600 ">Mohamed Junaid – Founder</figcaption>
+                        <figcaption class="p-2 bg-gray-100 text-gray-600 text-center ">Mohamed Junaid – Founder
+                        </figcaption>
                     </figure>
                 </div>
                 <div class="w-full mx-auto md:w-2/3 pr-0 md:pr-3 text-gray-600 pt-2 text-justify">
