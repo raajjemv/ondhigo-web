@@ -6,58 +6,29 @@
     <div class="container mx-auto px-2 ">
         <div class="mt-20">
             <div class="side-line text-center text-3xl open-sans text-red-600 ">ABOUT FOUNDER</div>
-            <div class="flex flex-wrap mt-10 md:mt-5">
-                <div class="w-2/3 md:w-1/3 pt-3 mx-auto ">
+            <div class="w-full mt-10 md:mt-5">
+                <div class="w-full md:w-1/3 pt-3 mx-auto ">
                     <figure class="border p-0 mr-0 md:mr-5 rounded-lg overflow-hidden">
                         <img src="{{ asset('storage/'.$about->founder_image) }}" class="w-full" alt="">
                         <figcaption class="p-2 bg-gray-100 text-gray-600 ">Mohamed Junaid – Founder</figcaption>
                     </figure>
                 </div>
-                <div class="w-full md:w-2/3 pr-0 md:pr-3 text-gray-600 pt-2 text-justify">
+                <div class="w-full mx-auto md:w-2/3 pr-0 md:pr-3 text-gray-600 pt-2 text-justify">
                     {!! $about->about_founder !!}
                 </div>
             </div>
         </div>
         <div class="my-10">
-            <div class="side-line text-center text-3xl open-sans text-red-600 mb-4">KEY MANAGEMENT TEAM</div>
+            <div class="side-line text-center text-3xl open-sans text-red-600 mb-4">SENIOR MANAGEMENT TEAM</div>
+            <div class="flex justify-center">
+                <div class="w-full md:w-1/3">
+                    @include('about.key-management',['item' => $key_management->first()])
+                </div>
+            </div>
             <div class="flex flex-wrap justify-center">
-                @foreach ($key_management as $item)
-                <div class="w-full md:w-1/2 px-2 mb-10">
-                    <div class="bg-gray-200 rounded-lg flex">
-                        <div>
-                            <img src="{{ asset('storage/'.$item->image) }}"
-                                class="w-44 h-full object-cover rounded-l-lg">
-                        </div>
-                        <div class="px-2 py-2">
-                            <div class="text-2xl font-semibold">{{ $item->name }}</div>
-                            <div class="text-sm text-gray-600 -mt-1 mb-3">({{ $item->designation }})</div>
-                            <div class="text-sm">
-                                <div class="flex  ">
-                                    <div class="font-semibold w-28">Nationality</div>
-                                    <div class="px-2">{{ $item->nationality }}</div>
-                                </div>
-                                <div class="flex ">
-                                    <div class="font-semibold w-28">Education</div>
-                                    <div class="px-2">{{ $item->education }}</div>
-                                </div>
-                                <div class="flex ">
-                                    <div class="font-semibold w-28">Experience</div>
-                                    <div class="px-2">{{ $item->experience }}</div>
-                                </div>
-                                <div class=" mt-3">
-                                    <div>
-                                        <span class="fas fa-envelope"></span>
-                                        {{ $item->email }}
-                                    </div>
-                                    <div>
-                                        <span class="fas fa-phone"></span>
-                                        {{ $item->contact_number }}
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                @foreach ($key_management->skip(1) as $item)
+                <div class="w-full md:w-1/3 px-2 mb-10">
+                    @include('about.key-management',['item' => $item])
                 </div>
                 @endforeach
             </div>
