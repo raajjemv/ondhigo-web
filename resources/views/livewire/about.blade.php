@@ -35,15 +35,15 @@
             </div>
         </div>
         <div class="mt-10 md:mt-16">
-            <div class="flex flex-wrap">
-                <div class="w-full md:w-1/2 px-2 ">
+            <div class="">
+                <div class="w-full md:w-1/2 px-2 mb-10 mx-auto">
                     <div class="bg-gray-50 p-5 rounded shadow">
                         <div class="side-line text-center text-3xl open-sans text-red-600 ">OUR
                             MISSION</div>
                         <div class="mt-5 text-center text-gray-500">{!! $about->mission !!}</div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 px-2 mt-5 md:mt-0 ">
+                <div class="w-full md:w-1/2 px-2 mt-5 md:mt-0 mx-auto">
                     <div class="bg-gray-50 p-5 rounded shadow">
                         <div class="side-line text-center text-3xl open-sans text-red-600 ">OUR
                             VISION</div>
