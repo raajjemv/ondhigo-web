@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-20">
+            {{-- <div class="mt-20">
                 <div class="side-line text-center text-3xl open-sans text-red-600 ">Core Values</div>
                 <div class="mt-10 ">
                     <div class="w-full  pr-0 md:pr-3 text-gray-600 text-justify flex justify-center">
@@ -88,7 +88,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> --}}
             <div class="mt-20">
                 <div class="side-line text-center text-3xl open-sans text-red-600 ">OVERVIEW</div>
                 <div class="flex flex-wrap">
