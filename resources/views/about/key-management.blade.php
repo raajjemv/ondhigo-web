@@ -14,7 +14,7 @@
                     @if ($item->education && $item->education !== '-')
                     <div class="flex ">
                          <div class="font-semibold w-1/3">Education</div>
-                         <div class="px-2 w-2/3">{{ $item->education }}</div>
+                         <div class="px-2 w-2/3">{!! nl2br($item->education) !!}</div>
                     </div>
                     @endif
                     <div class="flex ">
