@@ -21,7 +21,7 @@
         <div class="my-10">
             <div class="side-line text-center text-3xl open-sans text-red-600 mb-4">SENIOR MANAGEMENT TEAM</div>
             <div class="flex justify-center">
-                <div class="w-full md:w-1/3">
+                <div class="w-full md:w-2/3">
                     @include('about.key-management',['item' => $key_management->first()])
                 </div>
             </div>
