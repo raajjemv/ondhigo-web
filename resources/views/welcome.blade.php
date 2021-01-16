@@ -53,11 +53,11 @@
                 @else
                 <img src="{{ asset('storage/'.$item->image) }}" class="w-full h-56 object-contain" alt="">
                 @endif
-                <div class="text-md text-gray-600 uppercase p-2">{{ $item->name }}</div>
-            </div>
-        </a>
-        @endforeach
+                {{-- <div class="text-md text-gray-600 uppercase p-2">{{ $item->name }}</div> --}}
     </div>
+    </a>
+    @endforeach
+</div>
 </div>
 <div class="bg-gray-300 my-12 ">
     <div>
