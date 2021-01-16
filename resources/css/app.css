@@ -104,6 +104,16 @@
   min-width: 100%;
   padding-left: 10px;
 }
+.embla__slide_partners {
+  position: relative;
+  min-width: 20%;
+  padding-left: 10px;
+}
+@media (max-width: 640px) {
+  .embla__slide_partners {
+      min-width: 50%;
+  }
+}
 
 .embla__slide__inner {
   position: relative;

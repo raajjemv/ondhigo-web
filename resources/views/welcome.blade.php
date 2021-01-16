@@ -64,7 +64,7 @@
         <x-headings heading="OUR GLOBAL PARTNERS" color="text-red-700" />
     </div>
     <div class=" container mx-auto">
-        <div class="whitespace-nowrap overflow-auto " style="white-space: nowrap">
+        <div class="">
             @livewire('partners', ['partner_list' => $partners])
             {{-- @foreach ($partners as $partner)
             <a class="inline-block mx-6  rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
