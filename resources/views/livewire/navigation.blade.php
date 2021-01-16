@@ -59,6 +59,10 @@
             class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
             OUTLETS
         </a>
+        <a href="{{ route('recipe.index') }}"
+            class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
+            RECIPE'S
+        </a>
         <a href="{{ route('contact') }}"
             class="block mt-4 lg:inline-block lg:mt-0  hover:text-red-600 text-gray-800 mr-4 font-semibold">
             CONTACT US

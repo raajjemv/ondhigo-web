@@ -9,6 +9,7 @@ use App\Http\Livewire\Products;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RecipeController;
 use App\Http\Livewire\Gallery;
 use App\Http\Livewire\ShowGallery;
 
@@ -40,5 +41,6 @@ Route::get('/event/{slug}/{id}', Event::class)->name('event.show');
 Route::get('/galleries', Gallery::class)->name('galleries');
 Route::get('/gallery/{id}', [HomeController::class, 'galleryShow'])->name('gallery.show');
 Route::get('/outlets', [HomeController::class, 'outlets'])->name('outlets');
+Route::resource('recipe', RecipeController::class);
 
 Route::get('/product/{slug}/{id}', [ProductController::class, 'show'])->name('product.show');
