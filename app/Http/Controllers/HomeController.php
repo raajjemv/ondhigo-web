@@ -17,17 +17,17 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $landing_page_cover = $this->landing_page_cover();
+        $landing_page_covers = $this->landing_page_covers();
         $promotion = $this->promotion();
         $featured_products = $this->featured_products();
         $partners = $this->partners();
         $featured_videos = $this->featured_videos();
         $events = $this->events();
-        return view('welcome', compact('landing_page_cover', 'promotion', 'featured_products', 'partners', 'featured_videos', 'events'));
+        return view('welcome', compact('landing_page_covers', 'promotion', 'featured_products', 'partners', 'featured_videos', 'events'));
     }
-    public function landing_page_cover()
+    public function landing_page_covers()
     {
-        return LandingPageCover::latest()->first();
+        return LandingPageCover::latest()->take(3)->get();
     }
     public function promotion()
     {

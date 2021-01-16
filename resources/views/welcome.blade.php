@@ -6,10 +6,11 @@
     {{ session('message') }}
 </x-modal>
 @endif
-<div class=" relative z-0">
-    <a href="{{ $landing_page_cover->link }}">
-        <img src="{{ asset('storage/'.$landing_page_cover->image) }}" class="w-full h-auto md:h-99 object-cover">
-    </a>
+<div class="">
+    @livewire('cover-carousel', ['landing_page_covers' => $landing_page_covers])
+    {{-- <a href="{{ $landing_page_cover->link }}">
+    <img src="{{ asset('storage/'.$landing_page_cover->image) }}" class="w-full h-auto md:h-99 object-cover">
+    </a> --}}
 </div>
 {{-- <div class="border-t-8  border-black"
     style="background: url({{ asset('images/bg.jpg') }});background-repeat:no-repeat;background-size:100% 100%">
