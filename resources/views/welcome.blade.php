@@ -65,15 +65,15 @@
     </div>
     <div class=" container mx-auto">
         <div class="whitespace-nowrap overflow-auto " style="white-space: nowrap">
-
-            @foreach ($partners as $partner)
+            @livewire('partners', ['partner_list' => $partners])
+            {{-- @foreach ($partners as $partner)
             <a class="inline-block mx-6  rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                 href="{{ $partner->link }}" target="_blank">
-                <div>
-                    <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
-                </div>
+            <div>
+                <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
+            </div>
             </a>
-            @endforeach
+            @endforeach --}}
         </div>
     </div>
 </div>

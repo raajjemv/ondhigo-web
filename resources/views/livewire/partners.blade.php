@@ -12,15 +12,8 @@
           }" class="embla">
         <div x-ref="viewport" class="embla__viewport">
             <div class="embla__container">
-                @foreach ($landing_page_covers as $item)
-                <div class="embla__slide">
-                    <div class="embla__slide__inner h-64 md:h-99">
-                        <a href="{{ $item->link }}">
-                            <img class="embla__slide__img w-full h-full md:h-99 object-cover"
-                                src="{{ asset('storage/'.$item->image) }}" />
-                        </a>
-                    </div>
-                </div>
+                @foreach ($partner_list as $partner)
+                <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
                 @endforeach
 
 
