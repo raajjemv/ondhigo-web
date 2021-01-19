@@ -7,32 +7,10 @@
 </x-modal>
 @endif
 <div class="">
-    @livewire('cover-carousel', ['landing_page_covers' => $landing_page_covers])
-    {{-- <a href="{{ $landing_page_cover->link }}">
-    <img src="{{ asset('storage/'.$landing_page_cover->image) }}" class="w-full h-auto md:h-99 object-cover">
-    </a> --}}
+    <carousel-cover :landing_page_covers="{{ $landing_page_covers }}" />
+
 </div>
-{{-- <div class="border-t-8  border-black"
-    style="background: url({{ asset('images/bg.jpg') }});background-repeat:no-repeat;background-size:100% 100%">
-<div class="container mx-auto py-16">
-    <div class="text-4xl text-white uppercase text-center text-shadow">Welcome to Ondhigo</div>
-    <div class=" text-white text-center mt-5 leading-loose px-3 md:px-0">
-        ONDHIGO IS ONE OF THE LEADING DISTRIBUTOR OF INTERNATIONALLY RECOGNIZED BRANDS OF FOOD AND BEVERAGE PRODUCTS
-        TO
-        AN
-        EXTENSIVE NETWORK OF WHOLESALERS, RETAILERS, RESORTS AND HOTELS IN THE MALDIVES. OUR GLOBAL NETWORK OF
-        SUPPLIERS
-        INCLUDES MANUFACTURERS FROM SRI LANKA, PAKISTAN, SAUDI ARABIA, CANADA, ITALY, TURKEY, MALAYSIA,
-        SINGAPORE,INDIA,
-        INDONESIA AND THAILAND WITH ITS COMMERCIAL OFFICE AND KEY DISTRIBUTION POINT LOCATED AT THE MAIN HARBOR OF
-        THE
-        CAPITAL
-        CITY MALE', ONDHIGO HAS A DISTINCTIVE ADVANTAGE IN ATTRACTING MAJOR WHOLESALERS AND RETAILERS FROM DIFFERENT
-        PARTS OF
-        THE COUNTRY, WHO TRAVEL TO MALE'.
-    </div>
-</div>
-</div> --}}
+
 @if($promotion)
 <div>
     <a href="{{ $promotion->url }}" target="_blank">
@@ -65,15 +43,8 @@
     </div>
     <div class=" container mx-auto">
         <div class="">
-            @livewire('partners', ['partner_list' => $partners])
-            {{-- @foreach ($partners as $partner)
-            <a class="inline-block mx-6  rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                href="{{ $partner->link }}" target="_blank">
-            <div>
-                <img src="{{ asset('storage/'.$partner->logo) }}" alt="{{ $partner->name }}" class="w-full">
-            </div>
-            </a>
-            @endforeach --}}
+            <partner-slides :partners="{{ $partners }}" />
+
         </div>
     </div>
 </div>

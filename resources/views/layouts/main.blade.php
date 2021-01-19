@@ -60,8 +60,9 @@ ga('send', 'pageview');
 <body>
 
      <livewire:navigation />
-
-     @yield('content')
+     <div id="app">
+          @yield('content')
+     </div>
 
 
      <x-footer />

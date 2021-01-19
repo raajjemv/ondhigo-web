@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mx-auto mt-10">
      <div class="text-4xl text-red-600 text-center open-sans border-b border-gray-200 mb-10">
-          Recipe's
+          Recipes
      </div>
      <div class="flex flex-wrap">
           @foreach ($recipes as $recipe)

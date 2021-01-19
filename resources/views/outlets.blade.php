@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div class="container mx-auto my-10 py-10 px-3">
+<div class="container mx-auto my-10 py-10 px-3" id="app">
     <div class="mb-10">
         <div class="text-3xl text-red-600 open-sans">Head Office & Ondhigo Shop</div>
         <div class="mt-3 flex flex-wrap border rounded shadow-lg">
