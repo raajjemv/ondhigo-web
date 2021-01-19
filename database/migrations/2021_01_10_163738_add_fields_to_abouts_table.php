@@ -15,7 +15,7 @@ class AddFieldsToAboutsTable extends Migration
     {
         Schema::table('abouts', function (Blueprint $table) {
             $table->string('founder_image');
-            $table->string('overview_image');
+            $table->string('cover_image');
         });
     }
 

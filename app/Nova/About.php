@@ -47,7 +47,7 @@ class About extends Resource
             Trix::make('Vission')->withFiles('public'),
             Trix::make('Mission')->withFiles('public'),
             Trix::make('Overview')->withFiles('public'),
-            Image::make('Overview Image'),
+            Image::make('Cover Image')->help('1900x450'),
             Trix::make('About Founder')->withFiles('public'),
             Image::make('Founder Image'),
             Trix::make('History')->withFiles('public'),
