@@ -1,12 +1,14 @@
 <template>
-  <vueper-slides class="no-shadow" autoplay>
-    <vueper-slide
-      v-for="(slide, i) in landing_page_covers"
-      :key="i"
-      :image="slide.image"
-      :link="slide.link"
-    />
-  </vueper-slides>
+  <div class="main-cover">
+    <vueper-slides class="no-shadow" autoplay>
+      <vueper-slide
+        v-for="(slide, i) in landing_page_covers"
+        :key="i"
+        :image="slide.image"
+        :link="slide.link"
+      />
+    </vueper-slides>
+  </div>
 </template>
 <script>
 import { VueperSlides, VueperSlide } from "vueperslides";
@@ -22,3 +24,5 @@ export default {
   components: { VueperSlides, VueperSlide },
 };
 </script>
+<style lang="css" scoped>
+</style>

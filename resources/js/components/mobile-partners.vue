@@ -1,18 +1,20 @@
 <template>
-  <vueper-slides
-    class="no-shadow"
-    :visible-slides="2"
-    :arrows="false"
-    :gap="3"
-    autoplay
-  >
-    <vueper-slide
-      v-for="(slide, i) in partners"
-      :key="i"
-      :image="slide.logo"
-      :link="slide.link"
-    />
-  </vueper-slides>
+  <div class="partner-slider">
+    <vueper-slides
+      class="no-shadow"
+      :visible-slides="2"
+      :arrows="false"
+      :gap="3"
+      autoplay
+    >
+      <vueper-slide
+        v-for="(slide, i) in partners"
+        :key="i"
+        :image="slide.logo"
+        :link="slide.link"
+      />
+    </vueper-slides>
+  </div>
 </template>
 <script>
 import { VueperSlides, VueperSlide } from "vueperslides";

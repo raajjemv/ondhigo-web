@@ -74,11 +74,14 @@
 /* embla */
 }
 
-.vueperslides__parallax-wrapper {
+.partner-slider .vueperslides__parallax-wrapper {
   padding-bottom: 200px !important;
 }
 @media only screen and (max-width: 600px) {
-.vueperslides__parallax-wrapper {
+.partner-slider .vueperslides__parallax-wrapper {
   padding-bottom: 100px !important;
+}
+.main-cover .vueperslides__parallax-wrapper {
+  padding-bottom: 140px !important;
 }
 }
