@@ -77,6 +77,9 @@
 .partner-slider .vueperslides__parallax-wrapper {
   padding-bottom: 200px !important;
 }
+.main-cover .vueperslides__parallax-wrapper {
+  padding-bottom: 500px !important;
+}
 @media only screen and (max-width: 600px) {
 .partner-slider .vueperslides__parallax-wrapper {
   padding-bottom: 100px !important;
