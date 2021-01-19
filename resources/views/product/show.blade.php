@@ -46,7 +46,7 @@
                <div class="rounded-t-lg bg-gray-200  p-3">Related Products</div>
                <div class="flex flex-wrap bg-gray-50  shadow">
                     @foreach($related_products as $product)
-                    <a class="w-1/6 p-3"
+                    <a class="w-1/2 lg:w-1/6 p-3"
                          href="{{ route('product.show',['slug' => $product->slug,'id' => $product->id]) }}">
                          <div>
                               @if ($product->thumbnail)
