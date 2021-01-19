@@ -55,7 +55,7 @@
             <div class="mt-20">
                 <div class="side-line text-center text-3xl open-sans text-red-600 ">OVERVIEW</div>
                 <div class="flex flex-wrap">
-                    <div class="w-full  pr-0 md:pr-3 text-gray-600 text-justify px-3">
+                    <div class="w-full  text-gray-600 text-justify px-3">
                         {!! $about->overview !!}
                     </div>
 
