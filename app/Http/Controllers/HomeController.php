@@ -25,6 +25,9 @@ class HomeController extends Controller
         $promotion = $this->promotion();
         $featured_products = $this->featured_products();
         $partners = $this->partners();
+        $partners->map(function ($item) {
+            $item['logo'] = asset('storage/' . $item['logo']);
+        });
         $featured_videos = $this->featured_videos();
         $events = $this->events();
         return view('welcome', compact('landing_page_covers', 'promotion', 'featured_products', 'partners', 'featured_videos', 'events'));
