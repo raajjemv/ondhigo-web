@@ -31,7 +31,7 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .vueperslide {
-    background-size: 200px;
+    background-size: 150px;
   }
 }
 </style>
