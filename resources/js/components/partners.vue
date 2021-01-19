@@ -30,3 +30,9 @@ export default {
   components: { VueperSlides, VueperSlide },
 };
 </script>
+<style lang="css" scoped>
+.vueperslide {
+  background-repeat: no-repeat;
+  background-size: 200px;
+}
+</style>
