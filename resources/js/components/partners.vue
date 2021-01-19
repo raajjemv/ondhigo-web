@@ -3,9 +3,7 @@
     class="no-shadow"
     :visible-slides="6"
     :arrows="false"
-    :slide-ratio="1 / 4"
     :gap="3"
-    :dragging-distance="70"
     autoplay
   >
     <vueper-slide
@@ -33,6 +31,10 @@ export default {
 <style lang="css" scoped>
 .vueperslide {
   background-repeat: no-repeat;
-  background-size: 200px;
+}
+@media only screen and (max-width: 600px) {
+  .vueperslide {
+    background-size: 200px;
+  }
 }
 </style>
