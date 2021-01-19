@@ -7,6 +7,10 @@ Vue.component(
      require('./components/partners.vue').default
 );
 Vue.component(
+     'partner-slides-mobile',
+     require('./components/mobile-partners.vue').default
+);
+Vue.component(
      'carousel-cover',
      require('./components/carousel.vue').default
 );

@@ -43,8 +43,13 @@
     </div>
     <div class=" container mx-auto">
         <div class="">
-            <partner-slides :partners="{{ $partners }}" />
+            <div class="hidden lg:block">
+                <partner-slides :partners="{{ $partners }}" />
+            </div>
 
+            <div class="block lg:hidden">
+                <partner-slides-mobile :partners="{{ $partners }}" />
+            </div>
         </div>
     </div>
 </div>
