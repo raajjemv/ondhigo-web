@@ -167,4 +167,6 @@
 /* embla */
 }
 
-
+.vueperslides__parallax-wrapper {
+  padding-bottom: 200px !important;
+}

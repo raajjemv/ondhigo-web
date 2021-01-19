@@ -20,11 +20,6 @@ import "vueperslides/dist/vueperslides.css";
 
 export default {
   props: ["partners"],
-  data() {
-    return {
-      hello: "ok",
-    };
-  },
   components: { VueperSlides, VueperSlide },
 };
 </script>
@@ -33,6 +28,7 @@ export default {
   background-repeat: no-repeat;
   background-size: 200px;
 }
+
 @media only screen and (max-width: 600px) {
   .vueperslide {
     background-size: 80px;
