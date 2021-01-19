@@ -74,17 +74,19 @@
                         @endif
                         <div class="text-gray-700">{{ $product->name }}</div>
                         <div class="flex justify-between items-center">
-                            <div class="text-sm text-red-700 group-hover:text-gray-700 font-bold josefin-sans ">MVR
-                                {{ $product->price }}</div>
-                            <img src="{{ asset('storage/'.$product->brand->logo) }}" class="w-10 h-10 rounded-lg ">
-                        </div>
+                            {{-- <div class="text-sm text-red-700 group-hover:text-gray-700 font-bold josefin-sans ">MVR
+                                {{ $product->price }}
+                        </div> --}}
+                        <img src="{{ asset('storage/'.$product->brand->logo) }}"
+                            class="w-10 h-10 rounded-lg object-contain">
                     </div>
-                </a>
-                @endforeach
             </div>
-            <div class="mt-5 pt-5 border-t border-gray-200 ">
-                {{ $products->links() }}
-            </div>
+            </a>
+            @endforeach
+        </div>
+        <div class="mt-5 pt-5 border-t border-gray-200 ">
+            {{ $products->links() }}
         </div>
     </div>
+</div>
 </div>
