@@ -45,7 +45,7 @@ class Gallery extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Name'),
-            Image::make('Cover Image'),
+            Image::make('Cover Image')->help('800x0800'),
             Text::make('Location'),
             HasMany::make('Gallery Items')
         ];
