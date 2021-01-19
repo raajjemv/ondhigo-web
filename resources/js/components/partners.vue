@@ -31,10 +31,11 @@ export default {
 <style lang="css" scoped>
 .vueperslide {
   background-repeat: no-repeat;
+  background-size: 200px;
 }
 @media only screen and (max-width: 600px) {
   .vueperslide {
-    background-size: 200px;
+    background-size: 80px;
   }
 }
 </style>
