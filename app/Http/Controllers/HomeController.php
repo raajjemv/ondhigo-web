@@ -18,6 +18,10 @@ class HomeController extends Controller
     public function index()
     {
         $landing_page_covers = $this->landing_page_covers();
+        $landing_page_covers->map(function ($item) {
+            $item['image'] = asset('storage/' . $item['image']);
+        });
+        $landing_page_covers;
         $promotion = $this->promotion();
         $featured_products = $this->featured_products();
         $partners = $this->partners();
