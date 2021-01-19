@@ -14,7 +14,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="w-full mx-auto md:w-2/3 pr-0 md:pr-3 text-gray-600 pt-2 text-justify">
+                <div class="w-full mx-auto md:w-2/3 px-3 text-gray-600 pt-2 text-justify">
                     {!! $about->about_founder !!}
                 </div>
             </div>
@@ -51,48 +51,11 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="mt-20">
-                <div class="side-line text-center text-3xl open-sans text-red-600 ">Core Values</div>
-                <div class="mt-10 ">
-                    <div class="w-full  pr-0 md:pr-3 text-gray-600 text-justify flex justify-center">
-                        <div class="w-1/3">
-                            <div class="flex items-center ">
-                                <div class=" text-red-700 text-right pr-5 w-1/2 text-xl  font-bold">O</div>
-                                <div class="w-1/2">Original</div>
-                            </div>
-                            <div class="flex">
-                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold">N</div>
-                                <div class="w-1/2">Nutritiouse</div>
-                            </div>
-                            <div class="flex">
-                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold">D</div>
-                                <div class="w-1/2">Diverse</div>
-                            </div>
-                            <div class="flex">
-                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold">H</div>
-                                <div class="w-1/2">Healthy</div>
-                            </div>
-                            <div class="flex">
-                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold  mr-1 md:mr-2">I</div>
-                                <div class="w-1/2">Innovative</div>
-                            </div>
-                            <div class="flex">
-                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold">G</div>
-                                <div class="w-1/2">Growth</div>
-                            </div>
-                            <div class="flex">
-                                <div class="text-red-700 text-right pr-5 w-1/2 text-xl  font-bold">O</div>
-                                <div class="w-1/2">Oriented towards customers</div>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-            </div> --}}
             <div class="mt-20">
                 <div class="side-line text-center text-3xl open-sans text-red-600 ">OVERVIEW</div>
                 <div class="flex flex-wrap">
-                    <div class="w-full  pr-0 md:pr-3 text-gray-600 text-justify">
+                    <div class="w-full  pr-0 md:pr-3 text-gray-600 text-justify px-3">
                         {!! $about->overview !!}
                     </div>
 
