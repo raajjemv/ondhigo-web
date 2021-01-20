@@ -32,11 +32,11 @@
                     @endif
                 </div>
                 <div class="pl-2 md:pl-3 py-3">
-                    @foreach($products->groupBy('brand_id') as $product)
+                    @foreach($brands as $brand)
                     <div class="mb-1">
                         <a class="text-gray-500 hover:text-red-600 cursor-pointer"
-                            wire:click="$set('brand',{{ $product[0]['brand']['id'] }})">-
-                            {{ $product[0]['brand']['name'] }}</a>
+                            wire:click="$set('brand',{{ $brand->id }})">-
+                            {{ $brand->name }}</a>
                     </div>
                     @endforeach
                 </div>
@@ -51,11 +51,11 @@
                     @endif
                 </div>
                 <div class="pl-2 md:pl-3 py-3">
-                    @foreach($products->groupBy('category_id') as $product)
+                    @foreach($categories as $category)
                     <div class="mb-1">
                         <a class="text-gray-500 hover:text-red-600 cursor-pointer"
-                            wire:click="$set('category',{{ $product[0]['category']['id'] }})"> -
-                            {{ $product[0]['category']['name'] }}</a>
+                            wire:click="$set('category',{{ $category->id }})"> -
+                            {{ $category->name }}</a>
                     </div>
                     @endforeach
                 </div>

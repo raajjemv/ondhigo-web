@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Brand;
 use App\Models\Product;
 use Livewire\Component;
+use App\Models\Category;
 use Livewire\WithPagination;
 
 class Products extends Component
@@ -18,10 +20,7 @@ class Products extends Component
     {
         // $this->resetPage();
     }
-    // public function mount($search = null)
-    // {
-    //     $this->search =  $search;
-    // }
+
     public function render()
     {
         $brand = $this->brand;
@@ -36,7 +35,9 @@ class Products extends Component
                     return $query->where('category_id', $category);
                 })
                 ->latest()
-                ->paginate(16)
+                ->paginate(16),
+            'brands' => Brand::latest()->get(),
+            'categories' => Category::latest()->get()
         ])->extends('layouts.main');
     }
 }
