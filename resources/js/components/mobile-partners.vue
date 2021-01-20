@@ -6,6 +6,8 @@
       :arrows="false"
       :gap="3"
       autoplay
+      loop
+      :touchable="false"
     >
       <vueper-slide
         v-for="(slide, i) in partners"

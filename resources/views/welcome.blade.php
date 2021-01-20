@@ -60,7 +60,7 @@
         </div>
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/2 px-2">
-                <iframe class="w-full h-56 md:h-84"
+                <iframe class="w-full h-56 md:h-82"
                     src="http://www.youtube.com/embed/{{$featured_videos->first()->video}}" frameborder="0"
                     allowfullscreen></iframe>
             </div>
