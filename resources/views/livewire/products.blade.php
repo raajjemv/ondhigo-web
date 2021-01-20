@@ -34,9 +34,11 @@
                 <div class="pl-2 md:pl-3 py-3">
                     @foreach($brands as $brand)
                     <div class="mb-1">
-                        <a class="text-gray-500 hover:text-red-600 cursor-pointer"
-                            wire:click="$set('brand',{{ $brand->id }})">-
-                            {{ $brand->name }}</a>
+                        <a class="text-gray-500 hover:text-red-600 cursor-pointer flex items-center"
+                            wire:click="$set('brand',{{ $brand->id }})">
+                            <i class="fas fa-circle text-red-600" style="font-size:8px"></i>
+                            <span class="px-2">{{ $brand->name }}</span>
+                        </a>
                     </div>
                     @endforeach
                 </div>
@@ -54,8 +56,10 @@
                     @foreach($categories as $category)
                     <div class="mb-1">
                         <a class="text-gray-500 hover:text-red-600 cursor-pointer"
-                            wire:click="$set('category',{{ $category->id }})"> -
-                            {{ $category->name }}</a>
+                            wire:click="$set('category',{{ $category->id }})">
+                            <i class="fas fa-circle text-red-600" style="font-size:8px"></i>
+                            <span class="px-2">{{ $category->name }}</span>
+                        </a>
                     </div>
                     @endforeach
                 </div>
