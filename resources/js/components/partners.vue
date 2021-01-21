@@ -14,6 +14,7 @@
         :key="i"
         :image="slide.logo"
         :link="slide.link"
+        class="transform hover:scale-110 motion-reduce:transform-none"
       />
     </vueper-slides>
   </div>
@@ -24,6 +25,11 @@ import "vueperslides/dist/vueperslides.css";
 
 export default {
   props: ["partners"],
+  data() {
+    return {
+      newsClass: "class-v",
+    };
+  },
   components: { VueperSlides, VueperSlide },
 };
 </script>

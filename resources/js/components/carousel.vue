@@ -1,6 +1,11 @@
 <template>
   <div class="main-cover">
-    <vueper-slides class="no-shadow" autoplay>
+    <vueper-slides
+      class="no-shadow"
+      autoplay
+      transition-speed="1000"
+      duration="5000"
+    >
       <vueper-slide
         v-for="(slide, i) in landing_page_covers"
         :key="i"
