@@ -3,7 +3,7 @@
     <vueper-slides
       class="no-shadow"
       autoplay
-      transition-speed="1000"
+      transition-speed="2000"
       duration="5000"
     >
       <vueper-slide
