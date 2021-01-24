@@ -9,6 +9,7 @@
       loop
       :touchable="false"
       :bullets="false"
+      duration="1000"
     >
       <vueper-slide
         v-for="(slide, i) in partners"

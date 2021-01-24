@@ -7894,6 +7894,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7919,6 +7920,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vueperslides__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vueperslides__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vueperslides_dist_vueperslides_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vueperslides/dist/vueperslides.css */ "./node_modules/vueperslides/dist/vueperslides.css");
 /* harmony import */ var vueperslides_dist_vueperslides_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vueperslides_dist_vueperslides_css__WEBPACK_IMPORTED_MODULE_1__);
+//
 //
 //
 //
@@ -28092,7 +28094,8 @@ var render = function() {
             autoplay: "",
             loop: "",
             touchable: false,
-            bullets: false
+            bullets: false,
+            duration: "1000"
           }
         },
         _vm._l(_vm.partners, function(slide, i) {
@@ -28144,7 +28147,8 @@ var render = function() {
             autoplay: "",
             loop: "",
             touchable: false,
-            bullets: false
+            bullets: false,
+            duration: "1000"
           }
         },
         _vm._l(_vm.partners, function(slide, i) {

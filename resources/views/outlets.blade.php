@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mx-auto my-10 py-10 px-3" id="app">
     <div class="mb-10">
-        <div class="text-3xl text-red-600 open-sans">Head Office & Ondhigo Shop</div>
+        <div class="text-3xl text-red-600 open-sans">Ondhigo Shop</div>
         <div class="mt-3 flex flex-wrap border rounded shadow-lg">
             <div id='map' class="w-full md:w-1/2" style='height: 350px;'></div>
             <div class="flex items-center pt-3 md:pt-0">
