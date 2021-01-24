@@ -1,4 +1,4 @@
-<div class="footer bg-red-600 py-5 mt-20" style="background: url({{ asset('images/bg.jpg') }});background-size:100%">
+<div class="footer bg-red-600 py-5 mt-40" style="background: url({{ asset('images/bg.jpg') }});background-size:100%">
     <div class="container mx-auto px-3 md:px-0">
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/3">
