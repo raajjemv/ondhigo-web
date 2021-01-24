@@ -18,8 +18,11 @@
                     <div class="mt-3 border-b border-gray-200 pb-3">
                          <div class="flex justify-between items-center">
                               <div>
-                                   <span class="text-gray-600">MVR</span> <span
+                                   {{-- <span class="text-gray-600">MVR</span> 
+                                   <span
                                         class="text-4xl josefin-sans text-red-700">{{ number_format($product->price,2) }}</span>
+                                   --}}
+                                   <livewire:add-to-cart :product="$product" />
                               </div>
                               <a href="{{ route('product.index',['brand' => $product->brand->id]) }}">
                                    <img src="{{ asset('storage/'.$product->brand->logo) }}" class="w-24">
@@ -29,7 +32,7 @@
                     </div>
                </div>
                <div>
-                    <livewire:add-to-cart :product="$product" />
+
                </div>
           </div>
      </div>

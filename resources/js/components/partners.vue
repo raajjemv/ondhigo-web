@@ -3,11 +3,12 @@
     <vueper-slides
       class="no-shadow"
       :visible-slides="6"
-      :arrows="false"
+      :arrows="true"
       :gap="3"
       autoplay
       loop
       :touchable="false"
+      :bullets="false"
     >
       <vueper-slide
         v-for="(slide, i) in partners"

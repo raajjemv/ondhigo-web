@@ -8,6 +8,7 @@
       autoplay
       loop
       :touchable="false"
+      :bullets="false"
     >
       <vueper-slide
         v-for="(slide, i) in partners"
