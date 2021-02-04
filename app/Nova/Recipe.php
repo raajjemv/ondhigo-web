@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Media24si\NovaYoutubeField\Youtube;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -44,7 +45,16 @@ class Recipe extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Name'),
-            Youtube::make('Youtube Id')
+            Youtube::make('Youtube Id'),
+            Trix::make('Short Description'),
+            Trix::make('Description'),
+            Trix::make('Content'),
+            Text::make('Prep'),
+            Text::make('Additional'),
+            Text::make('Total'),
+            Text::make('Servings'),
+            Text::make('Yield'),
+            Trix::make('Nutrition Info')->nullable(),
 
         ];
     }
