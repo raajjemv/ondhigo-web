@@ -20,77 +20,38 @@
         </div>
     </div>
 
-    <div class="flex flex-wrap">
-        <div class="w-full md:w-1/5 mt-2">
-            <div class="bg-white shadow">
-                <div class="p-2 bg-gray-100 rounded text-red-600 font-semibold flex justify-between">
-                    Brands
-                    @if($brand)
-                    <button class="text-red-500" wire:click="$set('brand','')">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    @endif
-                </div>
-                <div class="pl-2 md:pl-3 py-3">
-                    @foreach($brands as $brand)
-                    <div class="mb-1">
-                        <a class="text-gray-500 hover:text-red-600 cursor-pointer flex items-center"
-                            wire:click="$set('brand',{{ $brand->id }})">
-                            <i class="fas fa-circle text-red-600" style="font-size:8px"></i>
-                            <span class="px-2">{{ $brand->name }}</span>
-                        </a>
-                    </div>
-                    @endforeach
-                </div>
+    <div class="space-y-4">
+        @foreach ($brands as $product_brands)
+        <div style="background-color: #D9D9D9" class=" rounded-xl p-4">
+            <div class="">
+                <img src="{{ asset('storage/'.$product_brands->logo) }}" alt="{{ $product_brands->name }}"
+                    class="w-20 h-10 rounded-lg object-cover">
             </div>
-            <div class="bg-white shadow mt-5">
-                <div class="p-2 bg-gray-100 rounded text-red-600 font-semibold flex justify-between">
-                    Categories
-                    @if($category)
-                    <button class="text-red-500" wire:click="$set('category','')">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    @endif
-                </div>
-                <div class="pl-2 md:pl-3 py-3">
-                    @foreach($categories as $category)
-                    <div class="mb-1">
-                        <a class="text-gray-500 hover:text-red-600 cursor-pointer"
-                            wire:click="$set('category',{{ $category->id }})">
-                            <i class="fas fa-circle text-red-600" style="font-size:8px"></i>
-                            <span class="px-2">{{ $category->name }}</span>
-                        </a>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <div class="flex-1">
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap my-10">
+                @php
+                $products = $brand ? $product_brands->products : $product_brands->products->take(6);
+                @endphp
                 @foreach ($products as $product)
-                <a href="{{ route('product.show',['slug' => $product->slug,'id' => $product->id]) }}"
-                    class="w-1/2 md:w-1/4 px-2 outline-none group mb-10">
-                    <div class="p-2 rounded-lg group-hover:bg-gray-100">
-                        @if ($product->thumbnail)
-                        <img src="{{ asset('storage/'.$product->thumbnail) }}" class="w-full object-cover" alt="">
-                        @else
-                        <img src="{{ asset('storage/'.$product->image) }}" class="rounded w-full h-72 object-cover">
-                        @endif
-                        <div class="text-gray-700">{{ $product->name }}</div>
-                        <div class="flex justify-between items-center">
-                            {{-- <div class="text-sm text-red-700 group-hover:text-gray-700 font-bold josefin-sans ">MVR
-                                {{ $product->price }}
-                        </div> --}}
-                        <img src="{{ asset('storage/'.$product->brand->logo) }}"
-                            class="w-10 h-10 rounded-lg object-contain">
-                    </div>
+                <a class="text-center w-1/2 lg:w-1/6 hover:bg-gray-100 rounded-lg"
+                    href="{{ route('product.show',['slug' => $product->slug,'id' => $product->id]) }}">
+                    <img src="{{ asset('storage/'.$product->image) }}" class="w-48 rounded-lg">
+                    <div class="text-sm uppercase  text-gray-700">{{ $product->name }}</div>
+                </a>
+                @endforeach
             </div>
-            </a>
-            @endforeach
+            <div class="text-right">
+                @if ($brand)
+                <button wire:click="$set('brand','')"
+                    class=" text-sm uppercase border border-gray-700 px-2 py-1 rounded bg-gray-100">clear</button>
+                @else
+                <button wire:click="$set('brand',{{ $product_brands->id }})"
+                    class=" text-sm uppercase border border-gray-700 px-2 py-1 rounded bg-gray-100">view
+                    all</button>
+                @endif
+
+            </div>
         </div>
-        <div class="mt-5 pt-5 border-t border-gray-200 ">
-            {{ $products->links() }}
-        </div>
+        @endforeach
     </div>
 </div>
 </div>
