@@ -50,7 +50,7 @@ class Message extends Resource
             Text::make('Email'),
             Textarea::make('Message'),
             Boolean::make('Seen'),
-            DateTime::make('Datetime', 'created_at')
+            DateTime::make('Datetime', 'created_at')->exceptOnForms()
         ];
     }
 
