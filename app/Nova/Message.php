@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
@@ -48,7 +49,8 @@ class Message extends Resource
             Text::make('Last Name'),
             Text::make('Email'),
             Textarea::make('Message'),
-            Boolean::make('Seen')
+            Boolean::make('Seen'),
+            DateTime::make('Datetime', 'created_at')
         ];
     }
 
