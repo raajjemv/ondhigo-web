@@ -17,7 +17,27 @@
      <link href="{{ asset('css/gallery/gallery.css') }}" rel="stylesheet">
      <link href="{{ asset('css/gallery/gallery-keyframes-swing.css') }}" rel="stylesheet">
 
+     {!! Meta::tag('title', 'Ondhigo') !!}
+     {!! Meta::tag('description',config('app.ondhigo_description')) !!}
+     {!! Meta::tag('robots','index,follow') !!}
+     {!! Meta::tag('url', Request::url()); !!}
+     {!! Meta::tag('image', asset('images/og.png')) !!}
 
+
+     {!! Meta::tag('og:type','website') !!}
+     {!! Meta::tag('og:title','Ondhigo') !!}
+     {!! Meta::tag('og:description',config('app.ondhigo_description')) !!}
+     {!! Meta::tag('og:url',Request::url()) !!}
+     {!! Meta::tag('og:image',asset('images/og.png')) !!}
+     {!! Meta::tag('fb:app_id','2972430516410512') !!}
+
+
+     {!! Meta::tag('twitter:card','summary_large_image') !!}
+     {!! Meta::tag('twitter:site',Request::url()) !!}
+     {!! Meta::tag('twitter:creator','ondhigo.com') !!}
+     {!! Meta::tag('twitter:title','Ondhigo') !!}
+     {!! Meta::tag('twitter:description',config('app.ondhigo_description')) !!}
+     {!! Meta::tag('twitter:image',asset('images/og.png')) !!}
      <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVZZFGE3Q9"></script>
      <script>
