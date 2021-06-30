@@ -7,7 +7,7 @@
             @if (session()->has('message'))
             <div class="bg-green-500 text-white p-4 rounded-lg  w-full lg:w-1/3 mx-auto ">
                 <span class="text-4xl fas fa-check-circle mr-3 block mb-2"></span>
-                <span>{{ session('message') }}</span>
+                <span>{!! session('message') !!}</span>
             </div>
             @else
             <form wire:submit.prevent="submit">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Luckydraw;
 
+use Carbon\Carbon;
 use Livewire\Component;
 
 class Form extends Component
@@ -16,8 +17,11 @@ class Form extends Component
     }
     public function submit()
     {
+        $tomorrow = Carbon::now()->addDay();
         $this->validate();
-        session()->flash('message', 'Thank you for participating in "Ondhigo NaseebVeriya" giveaway.The draw will live on Ondhigo.mv facebook tomorrow at 1700 hrs and the lucky winner will be announced. ');
+        session()->flash('message', 'Thank you and we appreciate your participation in "Ondhigo NaseebVeriya" giveaway.<br><br>
+The giveaway draw will take place live on Ondhigo facebook page tomorrow (specify date) at 1700 hrs and the lucky winner will be announced through this live event.<br><br>
+Stay with us!');
         return back();
     }
 }
