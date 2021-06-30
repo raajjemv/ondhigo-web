@@ -30,7 +30,7 @@ class FbController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'facebook_id' => $user->id,
-                    'password' => encrypt('john123')
+                    'password' => encrypt($user->email)
                 ]);
 
                 Auth::login($createUser);
