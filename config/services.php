@@ -29,5 +29,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    'facebook' => [
+        'client_id' => '234879838225885',
+        'client_secret' => 'ef264ea510662c0e20d12f3805cb369b',
+        'redirect' => 'http://ondhigo-web.test/auth/facebook/callback',
+    ],
 ];
