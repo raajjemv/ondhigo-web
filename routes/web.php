@@ -32,7 +32,10 @@ use App\Http\Livewire\Luckydraw\Form as LuckyDrawForm;
 Route::get('auth/facebook', [FbController::class, 'redirectToFacebook']);
 Route::get('auth/facebook/callback', [FbController::class, 'facebookSignin']);
 
-
+Route::get('/fb', function () {
+    $user = Socialite::driver('facebook')->user();
+    return $user;
+});
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/luckydraw', [LuckyDrawController::class, 'index']);
 Route::get('/naseebveriya', LuckyDrawForm::class);
