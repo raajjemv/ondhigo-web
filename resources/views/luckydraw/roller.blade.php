@@ -7,10 +7,10 @@
      <style type="text/css">
           html {
                background: url('https://onlyvectorbackgrounds.com/wp-content/uploads/2018/09/Abstract-Ambient-Light-Background-Day-Blue.jpg') no-repeat center center fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
+               -webkit-background-size: cover;
+               -moz-background-size: cover;
+               -o-background-size: cover;
+               background-size: cover;
           }
 
           .container {
@@ -49,28 +49,34 @@
 <body>
      <div id="app" class="relative">
           <div class="container mx-auto h-screen flex items-center justify-center">
-               <lottie-player v-if="animation" class="absolute left-0" src="https://assets6.lottiefiles.com/packages/lf20_5hufvwkz.json"  background="transparent"  speed="1"  style="width: 500px; height: 400px;"  loop  autoplay></lottie-player>
+               <lottie-player v-if="animation" class="absolute left-0"
+                    src="https://assets6.lottiefiles.com/packages/lf20_5hufvwkz.json" background="transparent" speed="1"
+                    style="width: 500px; height: 400px;" loop autoplay></lottie-player>
 
                <div>
                     <div class="w-full">
                          <img src="{{ asset('images/logo.png') }}" class="mx-auto w-56">
-                     </div>
+                    </div>
                     <div class="my-10">
                          <div class="text-9xl">
-                             @{{ number }}
+                              @{{ number }}
                          </div>
-                         
+
                     </div>
                     <div class="buttons ">
-                         <button v-if="!start" class="text-6xl rounded-3xl bg-red-600 text-white px-10 py-4" @click="goFetch">Start</button>
-                         <button v-else class="text-6xl rounded-3xl bg-red-600 text-white px-10 py-4" @click="start=false;animation=true">Stop</button>
+                         <button v-if="!start" class="text-6xl rounded-3xl bg-red-600 text-white px-10 py-4"
+                              @click="goFetch">Start</button>
+                         <button v-else class="text-6xl rounded-3xl bg-red-600 text-white px-10 py-4"
+                              @click="start=false;animation=true">Stop</button>
                     </div>
                </div>
-               <lottie-player v-if="animation" class="absolute right-0" src="https://assets6.lottiefiles.com/packages/lf20_5hufvwkz.json"  background="transparent"  speed="1"  style="width: 500px; height: 400px;"  loop  autoplay></lottie-player>
+               <lottie-player v-if="animation" class="absolute right-0"
+                    src="https://assets6.lottiefiles.com/packages/lf20_5hufvwkz.json" background="transparent" speed="1"
+                    style="width: 500px; height: 400px;" loop autoplay></lottie-player>
           </div>
 
-          
-          
+
+
      </div>
 
      <script src="https://cdn.jsdelivr.net/npm/vue"></script>

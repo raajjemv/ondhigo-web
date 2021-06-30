@@ -5,15 +5,16 @@ use App\Http\Livewire\About;
 use App\Http\Livewire\Event;
 use App\Http\Livewire\Events;
 use App\Http\Livewire\Contact;
-use App\Http\Livewire\Products;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LuckyDrawController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\RecipeController;
 use App\Http\Livewire\Gallery;
-use App\Http\Livewire\Luckydraw\Index;
+use App\Http\Livewire\Products;
 use App\Http\Livewire\ShowGallery;
+use App\Http\Livewire\Luckydraw\Form as LuckyDrawForm;
+use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Luckydraw\Index;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LuckyDrawController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,9 @@ use App\Http\Livewire\ShowGallery;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('/ondhigo-luckydraw', [LuckyDrawController::class, 'index']);
+Route::get('/luckydraw', [LuckyDrawController::class, 'index']);
+Route::get('/naseebveriya', LuckyDrawForm::class);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

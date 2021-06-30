@@ -79,7 +79,10 @@
 </head>
 
 <body>
-
+     <div id="fb-root"></div>
+     <script async defer crossorigin="anonymous"
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=2972430516410512&autoLogAppEvents=1"
+          nonce="NDnPDVfA"></script>
      <livewire:navigation />
      <div id="app">
           @yield('content')
