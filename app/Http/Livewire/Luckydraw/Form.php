@@ -12,7 +12,7 @@ class Form extends Component
 {
     public $mobile_number, $fb_user;
     protected $rules = [
-        'mobile_number' => 'required|min:7|max:7'
+        'mobile_number' => 'required|min:7|max:7|numeric'
     ];
     public function mount()
     {

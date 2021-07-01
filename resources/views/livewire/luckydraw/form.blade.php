@@ -46,11 +46,14 @@
                             <input type="text"
                                 class="flex-1 leading-normal  border h-10 border-grey-light rounded rounded-l-none px-1 lg:px-3 relative"
                                 placeholder="mobile number" wire:model="mobile_number">
-                            @error('mobile_number') <span class="w-full text-red-600 error">{{ $message }}</span>
-                            @enderror
+
 
                         </div>
-
+                        <div>
+                            @error('mobile_number') <span
+                                class="mb-3 block w-full text-red-600 error">{{ $message }}</span>
+                            @enderror
+                        </div>
                         <div class="flex items-center">
                             <img src="{{ $fb_user['avatar'] }}" class="w-14 rounded-full">
                             <div class="px-3">
