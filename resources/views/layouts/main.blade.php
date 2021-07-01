@@ -38,6 +38,7 @@
      {!! Meta::tag('twitter:title','Ondhigo') !!}
      {!! Meta::tag('twitter:description',config('app.ondhigo_description')) !!}
      {!! Meta::tag('twitter:image',asset('images/og.png')) !!}
+
      <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVZZFGE3Q9"></script>
      <script>

@@ -23,9 +23,9 @@ class Form extends Component
             $this->fb_user = collect($user);
         }
         Meta::set('title', 'Ondhigo NaseebVeriya Giveaway');
-        Meta::set('image', asset('images/lucky-draw/og.ong'));
-        Meta::set('og:image', asset('images/lucky-draw/og.ong'));
-        Meta::set('twitter:image', asset('images/lucky-draw/og.ong'));
+        Meta::set('image', asset('images/lucky-draw/og.png'));
+        Meta::set('og:image', asset('images/lucky-draw/og.png'));
+        Meta::set('twitter:image', asset('images/lucky-draw/og.png'));
         Meta::set('og:title', 'Ondhigo NaseebVeriya Giveaway');
         Meta::set('twitter:title', 'Ondhigo NaseebVeriya Giveaway');
     }
