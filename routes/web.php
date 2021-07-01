@@ -16,6 +16,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LuckyDrawController;
+use Laravel\Socialite\Two\InvalidStateException;
 use App\Http\Livewire\Luckydraw\Form as LuckyDrawForm;
 
 /*
@@ -29,18 +30,20 @@ use App\Http\Livewire\Luckydraw\Form as LuckyDrawForm;
 |
 */
 
-Route::get('auth/facebook', [FbController::class, 'redirectToFacebook']);
+Route::get('auth/facebook', [FbController::class, 'redirectToFacebook'])->name('fb.login');
 Route::get('auth/facebook/callback', [FbController::class, 'facebookSignin']);
-
-Route::get('/fb', function () {
-    $user = Socialite::driver('facebook')->user();
-    return $user;
+Route::get('fb', function () {
+    if (!\Session::has('fb_token')) {
+        return Socialite::driver('facebook')->redirect();
+    }
 });
+// Route::get('/fb', [FbController::class, 'user']);
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/luckydraw', [LuckyDrawController::class, 'index']);
 Route::get('/naseebveriya', LuckyDrawForm::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+
     return view('dashboard');
 })->name('dashboard');
 
