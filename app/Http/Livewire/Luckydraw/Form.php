@@ -51,7 +51,7 @@ class Form extends Component
 
 
         session()->flash('message', 'Thank you and we appreciate your participation in "Ondhigo NaseebVeriya" giveaway.<br><br>
-The giveaway draw will take place live on Ondhigo facebook page tomorrow (specify date) at 1700 hrs and the lucky winner will be announced through this live event.<br><br>
+The giveaway draw will take place live on Ondhigo facebook page tomorrow (' . $tomorrow->format('Y-m-d') . ') at 1700 hrs and the lucky winner will be announced through this live event.<br><br>
 Stay with us!');
         return back();
     }
