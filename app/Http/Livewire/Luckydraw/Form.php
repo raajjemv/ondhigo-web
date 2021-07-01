@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
+use Meta;
 
 class Form extends Component
 {
@@ -21,6 +22,12 @@ class Form extends Component
             $user = Socialite::driver('facebook')->userFromToken($token);
             $this->fb_user = collect($user);
         }
+        Meta::set('title', 'Ondhigo NaseebVeriya Giveaway');
+        Meta::set('image', asset('images/lucky-draw/og.ong'));
+        Meta::set('og:image', asset('images/lucky-draw/og.ong'));
+        Meta::set('twitter:image', asset('images/lucky-draw/og.ong'));
+        Meta::set('og:title', 'Ondhigo NaseebVeriya Giveaway');
+        Meta::set('twitter:title', 'Ondhigo NaseebVeriya Giveaway');
     }
     public function render()
     {
