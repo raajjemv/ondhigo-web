@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Luckydraw;
 
 use App\Models\LuckyDraw;
+use App\Models\LuckyDrawSetting;
 use Carbon\Carbon;
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
@@ -11,12 +12,13 @@ use Meta;
 
 class Form extends Component
 {
-    public $mobile_number, $fb_user;
+    public $mobile_number, $fb_user, $post;
     protected $rules = [
         'mobile_number' => 'required|min:7|max:7'
     ];
     public function mount()
     {
+        $this->post = LuckyDrawSetting::latest()->first();
         $token = Session::get('fb_token');
         if ($token) {
             $user = Socialite::driver('facebook')->userFromToken($token);

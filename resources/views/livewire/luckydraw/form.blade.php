@@ -26,11 +26,7 @@
                 </x-luckydraw.card>
                 <x-luckydraw.card label="step 2" description="LIKE & SHARE THIS POST">
                     <div class="p-3">
-                        <iframe
-                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fondhigo.mv%2Fposts%2F115366914124418&show_text=true&width=500"
-                            width="500" height="699" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                            allowfullscreen="true" class="mx-auto w-full"
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        {!! $post->post_embed !!}
                     </div>
                 </x-luckydraw.card>
 
