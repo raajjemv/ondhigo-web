@@ -55,42 +55,38 @@
                             @enderror
                         </div>
                         <div class="flex items-center blur-3xl">
-                            {{-- <img src="{{ $fb_user['avatar'] }}" class="w-14 rounded-full"> --}}
-                            <img src="https://i.pinimg.com/originals/58/e2/4f/58e24fda08ae4142eb5daf001caa9197.jpg"
-                                class="w-14 rounded-full ">
+                            <img src="{{ $fb_user['avatar'] }}" class="w-14 rounded-full">
                             <div class="px-3">
                                 <div class="text-sm text-gray-500">Logged in as</div>
+                                <div class="text-gray-700">{{ $fb_user['name'] }}
+                                </div>
+                            </div>
 
-                                <div class="text-gray-700">Aishath Aaniya</div>
-                                {{-- <div class="text-gray-700">{{ $fb_user['name'] }}
-                            </div> --}}
                         </div>
 
                     </div>
+                </x-luckydraw.card>
+                @if (session()->has('duplicate'))
+                <div class="bg-red-500 text-white p-2 rounded-lg  w-full lg:w-1/3  flex items-center mb-2">
+                    <span class="text-4xl fas fa-exclamation-triangle mr-3  mb-2"></span>
+                    <span>{!! session('duplicate') !!}</span>
+                </div>
+                @endif
+                <button class="border rounded-lg px-4 py-3 bg-green-500 text-white">
+                    <span class="fas fa-paper-plane"></span>
+                    Submit</button>
 
+            </form>
+            @else
+            <div class="text-center text-gray-700 uppercase font-semibold">
+                To continue please login
+                <a href="{{ route('fb.login') }}">
+                    <img src="{{ asset('images/facebook-login.png') }}" class="w-56 mx-auto">
+                </a>
+            </div>
+
+            @endif
+
+            @endif
         </div>
-        </x-luckydraw.card>
-        @if (session()->has('duplicate'))
-        <div class="bg-red-500 text-white p-2 rounded-lg  w-full lg:w-1/3  flex items-center mb-2">
-            <span class="text-4xl fas fa-exclamation-triangle mr-3  mb-2"></span>
-            <span>{!! session('duplicate') !!}</span>
-        </div>
-        @endif
-        <button class="border rounded-lg px-4 py-3 bg-green-500 text-white">
-            <span class="fas fa-paper-plane"></span>
-            Submit</button>
-
-        </form>
-        @else
-        <div class="text-center text-gray-700 uppercase font-semibold">
-            To continue please login
-            <a href="{{ route('fb.login') }}">
-                <img src="{{ asset('images/facebook-login.png') }}" class="w-56 mx-auto">
-            </a>
-        </div>
-
-        @endif
-
-        @endif
     </div>
-</div>
