@@ -36,7 +36,7 @@
 
                 <x-luckydraw.card label="step 3" description="Enter your mobile number">
                     <div class="p-3">
-                        <div class="flex flex-wrap items-stretch  mb-4 relative w-1/3">
+                        <div class="flex  mb-4 relative w-auto lg:w-1/3">
                             <div class="flex -mr-px">
                                 <span
                                     class="flex items-center leading-normal bg-grey-lighter rounded  border border-r-0 border-grey-light px-3 whitespace-no-wrap text-grey-dark text-sm">
@@ -44,7 +44,7 @@
                                     +960</span>
                             </div>
                             <input type="text"
-                                class="flex-shrink flex-grow flex-auto leading-normal w-px flex-1 border h-10 border-grey-light rounded rounded-l-none px-3 relative"
+                                class="flex-1 leading-normal  border h-10 border-grey-light rounded rounded-l-none px-1 lg:px-3 relative"
                                 placeholder="mobile number" wire:model="mobile_number">
                             @error('mobile_number') <span class="w-full text-red-600 error">{{ $message }}</span>
                             @enderror
