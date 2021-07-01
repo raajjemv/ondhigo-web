@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class LuckyDrawSetting extends Resource
@@ -42,7 +43,7 @@ class LuckyDrawSetting extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Post Embed'),
+            Textarea::make('Post Embed'),
             Text::make('Day')
         ];
     }
