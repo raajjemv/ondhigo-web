@@ -25,7 +25,7 @@ class FbController extends Controller
 
             if ($facebookId) {
                 Auth::login($facebookId);
-                return redirect('/dashboard');
+                return redirect('/naseebveriya');
             } else {
                 $token = $user->token;
                 Session::put('fb_token', $token);
@@ -35,7 +35,6 @@ class FbController extends Controller
                 //     'facebook_id' => $user->id,
                 //     'password' => encrypt($user->email)
                 // ]);
-
                 // Auth::login($createUser);
                 return redirect('/naseebveriya');
             }
