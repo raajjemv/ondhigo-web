@@ -44,7 +44,9 @@ class LuckyDraw extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Number'),
+            Text::make('Number')->exceptOnForms(),
+            Text::make('Facebook Id')->exceptOnForms(),
+            Text::make('Facebook Name')->exceptOnForms(),
             Boolean::make('Short Listed'),
             DateTime::make('Created At')->exceptOnForms()
         ];

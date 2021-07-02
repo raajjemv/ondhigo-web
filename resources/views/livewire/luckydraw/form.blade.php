@@ -1,3 +1,6 @@
+@php
+$except_hours = [16,17];
+@endphp
 <div>
     <div class="container mx-auto p-2">
         <div class="mt-10">
@@ -32,6 +35,8 @@
 
                 <x-luckydraw.card label="step 3" description="Enter your mobile number">
                     <div class="p-3">
+
+                        @if (!in_array(date('H'),$except_hours))
                         <div class="flex  mb-4 relative w-auto lg:w-1/3">
                             <div class="flex -mr-px">
                                 <span
@@ -42,14 +47,14 @@
                             <input type="text"
                                 class="flex-1 leading-normal  border h-10 border-grey-light rounded rounded-l-none px-1 lg:px-3 relative"
                                 placeholder="mobile number" wire:model="mobile_number">
-
-
                         </div>
                         <div>
                             @error('mobile_number') <span
                                 class="mb-3 block w-full text-red-600 error">{{ $message }}</span>
                             @enderror
                         </div>
+
+
                         <div class="flex items-center blur-3xl">
                             <img src="{{ $fb_user['avatar'] }}" class="w-14 rounded-full">
                             <div class="px-3">
@@ -59,7 +64,9 @@
                             </div>
 
                         </div>
-
+                        @else
+                        <div>Draw On-going</div>
+                        @endif
                     </div>
                 </x-luckydraw.card>
                 @if (session()->has('duplicate'))
@@ -68,10 +75,11 @@
                     <span>{!! session('duplicate') !!}</span>
                 </div>
                 @endif
+                @if (!in_array(date('H'),$except_hours))
                 <button class="border rounded-lg px-4 py-3 bg-green-500 text-white">
                     <span class="fas fa-paper-plane"></span>
                     Submit</button>
-
+                @endif
             </form>
             @else
             <div class="text-center text-gray-700 uppercase font-semibold">
