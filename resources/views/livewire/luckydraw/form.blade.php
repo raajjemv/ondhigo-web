@@ -65,7 +65,7 @@ $except_hours = [16,17];
 
                         </div>
                         @else
-                        <div>Draw On-going</div>
+                        <div>Draw On-going {{ date('H') }}</div>
                         @endif
                     </div>
                 </x-luckydraw.card>
