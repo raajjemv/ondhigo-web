@@ -54,8 +54,8 @@
                     style="width: 500px; height: 400px;" loop autoplay></lottie-player>
 
                <div>
-                    <div class="w-full">
-                         <img src="{{ asset('images/logo.png') }}" class="mx-auto w-56">
+                    <div class="text-center mb-10">
+                         <img src="{{ asset('images/lucky-draw/logo.png') }}" class="w-72 rounded-lg mx-auto">
                     </div>
                     <div class="my-10">
                          <div class="text-9xl">
@@ -68,6 +68,9 @@
                               @click="goFetch">Start</button>
                          <button v-else class="text-6xl rounded-3xl bg-red-600 text-white px-10 py-4"
                               @click="start=false;animation=true">Stop</button>
+                    </div>
+                    <div class="w-full mt-10">
+                         <img src="{{ asset('images/logo.png') }}" class="mx-auto w-48">
                     </div>
                </div>
                <lottie-player v-if="animation" class="absolute right-0"
