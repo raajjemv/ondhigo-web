@@ -50,12 +50,13 @@ class Form extends Component
         if ($today) {
             return back()->with('duplicate', 'Sorry your number is already in the system!');
         }
+        $config = LuckyDrawSetting::latest()->first();
 
         LuckyDraw::forceCreate([
             'number' => $this->mobile_number,
             'facebook_id' => $this->fb_user['id'],
             'facebook_name' => $this->fb_user['name'],
-            'day_no' => $day_no
+            'day_no' => $config->day
         ]);
 
 
