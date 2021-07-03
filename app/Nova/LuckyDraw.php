@@ -32,7 +32,7 @@ class LuckyDraw extends Resource
      * @var array
      */
     public static $search = [
-        'number',
+        'number', 'facebook_name', 'facebook_id'
     ];
 
     /**
