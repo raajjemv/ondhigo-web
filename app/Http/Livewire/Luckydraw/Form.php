@@ -18,7 +18,7 @@ class Form extends Component
     ];
     public function mount()
     {
-        $this->post = LuckyDrawSetting::latest()->first();
+        $this->post = LuckyDrawSetting::orderBy('id','DESC')->first();
         $token = Session::get('fb_token');
         if ($token) {
             $user = Socialite::driver('facebook')->userFromToken($token);
